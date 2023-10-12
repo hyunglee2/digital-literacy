@@ -1,0 +1,77 @@
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(var(--vh, 1vh)*93);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.w-100 {
+    width:100%
+}
+
+.icons_wrap {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+}
+
+.icons_wrap .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    width: 25%;
+}
+
+.icons_wrap img{
+    border-radius: 3rem;
+}
+
+.icons_wrap .app_name{
+    margin-top: 1em;
+    font-size: x-large;
+    text-align: center;
+}
+
+.bg_bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+.bg_bottom .dots svg{
+    color: white;
+    width: 2.5em;
+    height: 2.5em;
+}
+.dots {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 767px) {
+
+    .icons_wrap .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5em;
+        width: 25%;
+    }
+
+    .icons_wrap div {
+        font-size: unset !important ;
+    }
+
+}

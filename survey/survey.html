@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Literacy</title>
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link href="../common/styles/font.css" rel="stylesheet" />
+    <link href="../common/styles/common.css" rel="stylesheet" />
+    <link href="./styles/main.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <div id="bg_phone">
+        <div id="view_wrap">
+            <div id="view">
+                <main class="main" , id="main" , role="main">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                </div>
+                                <div class="modal-body">
+                                    모달 내용
+                                </div>
+                                <div class="modal-footer border-0 ">
+                                    <button type="button" class="btn btn-secondary btn-lg"
+                                        data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------------------ page 1 ------------------------------>
+                    <div class="page center active" id="p1">
+                        <div class="page_wrap">
+                            <div class='container'>
+                                <div class="top_bar px-3 py-3">
+                                    <div onclick="location.href='../index.html'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="text-x-large text-bold">체크리스트형 설문</div>
+                                    <svg></svg>
+                                </div>
+                                <div class='scroller'>
+                                    <div class="instructions">
+                                        (지시문 또는 안내 영역)<br></br>
+                                        나는 부산에서 살고 있습니다. 다음주 토요일 지인이 서울에서 결혼식을 합니다. 결혼식에 참석하기 위해서 부산에서 서울까지 어떤 방법으로 이동할지
+                                        고민입니다.
+                                    </div>
+                                    <form>
+                                        <div class='question_wrap'>
+                                            <div class='question'>
+                                                Q. 체크리스트형 설문 질문이 들어가는 영역. 아래는 UI를 위해 적어둔 내용
+                                            </div>
+                                            <input class="form-control sub" id="" placeholder="" onChange=''>
+                                        </div>
+                                        <div class='question_wrap'>
+                                            <div class='question'>
+                                                Q. 다음 중 부산에서 서울까지 교통편을 알아보기 위해 사용할 앱을 적절한 것은?
+                                            </div>
+                                            <div class='options_wrap options_row'>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <img src="./images/icon.png">
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <img src="./images/icon.png">
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <img src="./images/icon.png">
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <img src="./images/icon.png">
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <img src="./images/icon.png">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class='question_wrap'>
+                                            <div class='question'>
+                                                Q. 다음 중 부산에서 서울까지 교통편을 알아보기 위해 사용할 앱을 적절한 것은?
+                                            </div>
+                                            <div class='options_wrap options_column'>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <div>옵션 1 : 문장 또는 단어가 선택지로 주어지는 경우의 UI</div>
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <div>옵션 2 : 문장 또는 단어가 선택지로 주어지는 경우의 UI</div>
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <div>옵션 3 : 문장 또는 단어가 선택지로 주어지는 경우의 UI</div>
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <div>옵션 4 : 문장 또는 단어가 선택지로 주어지는 경우의 UI</div>
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>
+                                                    <div>옵션 5 : 문장 또는 단어가 선택지로 주어지는 경우의 UI. 더더 긴 문장이 선택지로 주어지는 경우 다음 줄 까지 이어집니다.</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class='question_wrap'>
+                                            <div class='question'>
+                                                Q. 주관식형 설문 질문이 들어가는 영역. 아래는 UI를 위해 적어둔 내용
+                                            </div>
+                                            <input class="form-control sub" id="" placeholder="" onChange=''>
+                                        </div>
+                                        <div class='question_wrap'>
+                                            <div class='question'>
+                                                Q. 주관식형 설문 질문이 들어가는 영역. 아래는 UI를 위해 적어둔 내용
+                                            </div>
+                                            <input class="form-control sub" id="" placeholder="" onChange=''>
+                                        </div>
+
+                                    </form>
+                                    <div class="instructions">
+                                        (지시문 또는 안내 영역)<br></br>
+                                        나는 부산에서 살고 있습니다. 다음주 토요일 지인이 서울에서 결혼식을 합니다. 결혼식에 참석하기 위해서 부산에서 서울까지 어떤 방법으로 이동할지
+                                        고민입니다.<br><br>
+                                        <img src="./images/index.jpg">
+                                    </div>
+                                    <form>
+                                        <div class='question_wrap'>
+                                            <div class='question'>
+                                                Q. 체크리스트형 설문 질문이 들어가는 영역. 아래는 UI를 위해 적어둔 내용
+                                            </div>
+                                            <input class="form-control sub" id="" placeholder="" onChange=''>
+                                        </div>
+                                        <div class='question_wrap'>
+                                            <div class='question'>
+                                                Q. 다음 중 부산에서 서울까지 교통편을 알아보기 위해 사용할 앱을 적절한 것은?
+                                            </div>
+                                            <div class='options_wrap'>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>옵션 1
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>옵션 2
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>옵션 3
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>옵션 4
+                                                </label>
+                                                <label key="">
+                                                    <input type="checkbox" class="form-check-input" name="" onclick="" value=""/>옵션 5
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <button type="button" class="btn btn-warning text-bold"
+                                    onclick="location.href='../main/main.html'">제출하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <div class="ctrlbar" id="ctrlbar">
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"> </script>
+    <script src="./common/js/pg_handler.js"> </script>
+</body>
+
+</html>
