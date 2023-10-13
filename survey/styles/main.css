@@ -43,28 +43,28 @@ form {
 .btn {
     width: 90%;
     min-height: calc(var(--vh, 1vh)*6);
-    letter-spacing:2px
+    letter-spacing: 2px
 }
 
-.question_wrap{
+.question_wrap {
     display: flex !important;
     min-width: fit-content;
     align-items: flex-start;
-    flex-direction: column!important;
-    padding: 1rem!important;
-    padding-bottom: 2rem!important;
+    flex-direction: column !important;
+    padding: 1em !important;
+    padding-bottom: 2rem !important;
     width: 100%;
 }
 
-.question_wrap .question{
+.question_wrap .question {
     align-items: flex-start;
 }
 
 .options_wrap {
- padding-top: 0.5em;
- display: flex;
-     justify-content: space-between;
-     width: 100%;
+    padding-top: 0.5em;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .options_column {
@@ -79,18 +79,18 @@ form {
 }
 
 .options_column input {
-    width:0 !important;
+    width: 0 !important;
 }
 
 .options_row {
     display: flex;
 }
 
-.options_row input{
-        width: 1em !important;
-        height: 1em;
-        margin: 0.5em;
-    
+.options_row input {
+    width: 1em !important;
+    height: 1em;
+    margin: 0.5em;
+
 }
 
 .question {
@@ -140,7 +140,7 @@ label img {
         background-color: #eee;
         padding: 1.5em;
         border-radius: 1rem;
-        font-size:x-large;
+        font-size: x-large;
     }
 
     .scroller {
@@ -151,30 +151,30 @@ label img {
     .btn {
         width: 90%;
         min-height: calc(var(--vh, 1vh)*6);
-        letter-spacing:6px;
-        font-size:x-large !important;
+        letter-spacing: 6px;
+        font-size: x-large !important;
         border-radius: 1rem !important;
     }
 
-    .question_wrap{
+    .question_wrap {
         display: flex !important;
         min-width: fit-content;
         align-items: flex-start;
-        flex-direction: column!important;
-        padding: 3rem!important;
+        flex-direction: column !important;
+        padding: 1em !important;
     }
-    
-    .question_wrap .question{
+
+    .question_wrap .question {
         align-items: flex-start;
         font-size: x-large;
     }
-    
+
     .options_wrap {
-     padding-top: 0.5em;
-     font-size:x-large;
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
+        padding-top: 0.5em;
+        font-size: x-large;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
 
     }
 
@@ -183,7 +183,7 @@ label img {
         height: 1em;
         margin: 0.5em;
     }
-    
+
     label {
         display: flex !important;
         flex-direction: column;
@@ -197,6 +197,41 @@ label img {
 
 }
 
+#view {
+
+}
 
 
 
+/* ++++++++++++ 태블릿 이상 사이즈 미디어쿼리 ++++++++++++++++ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #view_wrap {
+        min-width: 768px;
+        max-width: 1024px;
+    }
+
+    .instructions {
+        width: 95% !important;
+    }
+
+
+}
+
+@media (min-width: 1025px) {
+    #view_wrap {
+        width : unset !important;
+        min-width: unset !important;
+        max-width: unset !important;
+    }
+    .main {
+        width: 30%;
+max-width : 768px !important;;
+
+    }
+    .instructions {
+        width: 95% !important;
+    }
+    .question_wrap {
+        padding: 2em !important;
+    }
+}

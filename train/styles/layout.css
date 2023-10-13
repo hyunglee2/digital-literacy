@@ -75,6 +75,7 @@
   
   #p1 .tab .left {
     width: 30%;
+max-width : 768px !important;;
   }
   
   #p1 .tab .cntr {
@@ -86,6 +87,7 @@
   
   #p1 .tab .right {
     width: 30%;
+max-width : 768px !important;;
   }
   
   #p1 .tab:nth-child(3) div {

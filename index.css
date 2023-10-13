@@ -29,7 +29,7 @@ button {
 #view_wrap {
     display: unset !important;
     align-content: center;
-    justify-content: center!important;
+    justify-content: center !important;
 }
 
 .wrap {
@@ -40,7 +40,7 @@ button {
     justify-content: center;
     height: calc(var(--vh, 1vh)*100);
     display: flex;
-    flex-direction: column!important;
+    flex-direction: column !important;
     padding-top: calc(var(--bs-gutter-x) * 0.5);
     padding-bottom: calc(var(--bs-gutter-x) * 0.5);
     align-items: center;
@@ -55,22 +55,47 @@ button {
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px){
-.page_wrap {
-    max-width: unset !important;
-}
-#bg_phone{
-    background: white !important;
-}
-#view_wrap{
-    background: white !important;
-}
+/* ++++++++++++ 태블릿 이상 사이즈 미디어쿼리 ++++++++++++++++ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .page_wrap {
+        max-width: unset !important;
+    }
+
+    #bg_phone {
+        background: white !important;
+    }
+
+    #view_wrap {
+        background: white !important;
+    }
+
+    .main {
+        min-width: 768px;
+        max-width: 1024px;
+    }
 }
 
-@media (max-width: 767px) {
 
-    input, button  {
+/* ++++++++++++ 모바일 사이즈 미디어쿼리 ++++++++++++++++ */
+@media (max-width: 767px)  {
+
+    input,
+    button {
         font-size: unset !important;
     }
 
+    .main {
+        min-width: 375px;
+        max-width: 480px;
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .main {
+        width: 30%;
+max-width : 768px !important;;
+
+    }
 }
