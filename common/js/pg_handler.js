@@ -68,6 +68,12 @@ window.addEventListener("resize", () => {
         console.log(page_num);
     });
 
+    //다음 버튼 : 클릭 시 페이지 이동, 해당 페이지오디오만 재생(배열 인덱스라 페이지 넘버-1) 
+    $(document).on("click", "#help_btn", function () {
+        $('#modalForInit').modal('show');
+        $('.modal-body').html(instruction);
+    });
+
 
     //*******************************************************************************
     //**************************+    클릭 제어   +*********************************** 
@@ -100,9 +106,12 @@ window.addEventListener("resize", () => {
     // )
 
 
-    //특정 영역 외 클릭시 이벤트 처리 (class 명으로 가져오기)
-    document.querySelector("main").addEventListener("click", function (e) {//메인 영역에서만 이벤트 발생
 
+
+
+    //특정 영역 외 클릭시 이벤트 처리 (class 명으로 가져오기)
+    // document.querySelector("page").addEventListener("click", function (e) {//메인 영역에서만 이벤트 발생
+        $(document).on("click", ".page", function (e) {
         var myPgNum = $(".active").attr('id');// active 되어있는 페이지 id 값
         var real_pg = myPgNum.slice(1); // id값 앞에 붙은 p 떼어내기
         var clickableArea = "pg_" + real_pg + "_answer";
@@ -150,7 +159,7 @@ window.addEventListener("resize", () => {
         // } else {
         //     $('.modal-body').text(instruction);
         // }
-        $('.modal-body').html(instruction);
+        $('.modal-body').html(tryAginMsg);
 
 
     });

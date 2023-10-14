@@ -8,11 +8,17 @@ const instruction = [
      `
 ]
 
+const tryAginMsg = [
+    `
+    다시 시도해보세요!
+     `
+]
+
 // 페이지 로드 후 0.5초 후 모달로 지시문 띄우기
 $(document).ready(function () {
     $( document ).ready(function() {
         setTimeout(function () {
-            $('#staticBackdrop').modal('show');
+            $('#modalForInit').modal('show');
             $('.modal-body').html(instruction);
         }, 500);
       });  

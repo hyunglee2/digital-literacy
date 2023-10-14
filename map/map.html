@@ -24,9 +24,26 @@
         <div id="view_wrap">
             <div id="view">
                 <main class="main main-93" , id="main" , role="main">
+                    <!-- Modal : instruction -->
+                    <div class="modal fade" id="modalForInit">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                </div>
+                                <div class="modal-body">
+                                    모달 내용
+                                </div>
+                                <div class="modal-footer border-0 ">
+                                    <button type="button" class="btn btn-secondary btn-lg"
+                                        data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop">
-                        <div class="modal-dialog modal-sm">
+                        <div class="modal-dialog modal-sm modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header border-0">
                                 </div>
@@ -534,15 +551,20 @@
                 </main>
                 <div class="ctrlbar" id="ctrlbar">
                     <div class="bottom_bar px-3 py-3">
-                        <div onclick="location.href='../index.html'">
+                        <div class="text-x-large text-bold"></div>
+                        <div id="help_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-arrow-left-short" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                                class="bi bi-question-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                             </svg>
                         </div>
-                        <div class="text-x-large text-bold"></div>
-                        <div class="text-x-large text-bold"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z" />
+                        </svg>
                     </div>
                 </div>
             </div>

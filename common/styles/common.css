@@ -297,20 +297,31 @@ svg {
 @media (min-width: 768px) and (max-width: 1024px) {
   .modal {
     width: 100% !important;
-    top: 20vh !important;
-    left: -10% !important;
+    /* top: 20vh !important;
+    left: -10% !important; */
   }
 
   .modal-content {
     width: 150% !important;
   }
+
+  #modalForInit {
+    width: 100% !important;
+    top: unset !important;
+    left: unset !important;
+  }
+
+  #modalForInit .modal-content {
+    width: 100% !important;
+  }
+
 }
 
 @media (min-width: 1025px) {
 
 .modal {
-    top: 20% !important;
-    width: 100% !important;
+    /* top: 20% !important;
+    width: 100% !important; */
 }
 
   .modal-content {
@@ -320,9 +331,8 @@ svg {
 
 @media (max-width: 767px) {
   .modal {
-    width: 80% !important;
-    top: 30vh !important;
-    left: 10% !important;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
@@ -332,6 +342,7 @@ svg {
 
   .main {
     width : 80%;
+    max-width: 720px;
     border : 2px solid rgb(208, 208, 208);
   }
 
@@ -349,8 +360,11 @@ svg {
     max-width: 1024px;
   }
 
-  .page_wrap {
+  .page {
     max-width: 720px;
+  }
+  .page_wrap {
+    width : 100%;
   }
 
   .bottom_bar {
@@ -377,6 +391,7 @@ svg {
 
   .ctrlbar {
     width: 80%;
+    max-width: 720px;
   }
 
   .bottom_bar {
@@ -393,6 +408,11 @@ svg {
   .bottom_bar svg {
     width: 3em;
     height: 3em;
+  }
+
+  .ctrlbar .bottom_bar svg {
+    width: 1.5em;
+    height: 1.5em;
   }
 
   .bottom_bar .text-x-large {
@@ -432,6 +452,11 @@ max-width : 768px !important;;
   .bottom_bar svg {
     width: 3em;
     height: 3em;
+  }
+
+  .ctrlbar .bottom_bar svg {
+    width: 2em;
+    height: 2em;
   }
   
   div {
