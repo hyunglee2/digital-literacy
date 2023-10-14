@@ -57,7 +57,7 @@ a[x-apple-data-detectors] {
   overflow: hidden;
   box-sizing: content-box;
   flex-basis: var(--screen-width);
-  width: 100vw;
+  width: 100%;
   height: calc(var(--vh, 1vh)*100);
   position: relative;
   background: #eee;
