@@ -37,8 +37,26 @@ const inputAnswer = [
     {}
 ];
 
+ //+++++++++++현재 사용자 데이터로 셋팅하기+++++++++++++++++
+ const user = localStorage.getItem('user_now');//지금 사용자 누구
+ const parse_data = JSON.parse(localStorage.getItem(user));//지금 사용자 데이터
+ var succ = currScn + 'succ';
+ var currSucc = parse_data.user_data[parsingNum][succ];
+
+
 $(document).on("click", ".end_pt", function () {
+    alert(fail);
+    currSucc = 1;
+    localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
     location.href = "../train/train.html";
 });
+
+$(document).on("click", ".skip_btn", function () {
+    alert('스킵');
+    currSucc = 0;
+    localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+    location.href = "../train/train.html";
+});
+
 
 

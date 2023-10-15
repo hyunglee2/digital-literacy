@@ -1,3 +1,7 @@
+.main {
+    border : unset !important;
+}
+
 .scroller {
     height: calc(var(--vh, 1vh)*92);
     width: 100%;
@@ -197,11 +201,6 @@ label img {
 
 }
 
-#view {
-
-}
-
-
 
 /* ++++++++++++ 태블릿 이상 사이즈 미디어쿼리 ++++++++++++++++ */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -214,23 +213,30 @@ label img {
         width: 95% !important;
     }
 
+    #view {
+        background: white !important;
+    }
 
 }
 
 @media (min-width: 1025px) {
     #view_wrap {
-        width : unset !important;
+        width: unset !important;
         min-width: unset !important;
         max-width: unset !important;
     }
+
     .main {
         width: 30%;
-max-width : 768px !important;;
+        max-width: 768px !important;
+        ;
 
     }
+
     .instructions {
         width: 95% !important;
     }
+
     .question_wrap {
         padding: 2em !important;
     }
