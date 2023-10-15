@@ -6,15 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById("prev");
     const nextBtn = document.getElementById("next");
 
+    //+++++++++++현재 사용자 데이터로 셋팅하기+++++++++++++++++
+    const user = localStorage.getItem('user_now');//지금 사용자 누구
+    const parse_data = JSON.parse(localStorage.getItem(user));//지금 사용자 데이터
 
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //창 비율 고정
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty("--vh", `${vh}px`);
-
-window.addEventListener("resize", () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
-});
+
+    window.addEventListener("resize", () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
 
 
     //*******************************************************************************
@@ -111,7 +115,7 @@ window.addEventListener("resize", () => {
 
     //특정 영역 외 클릭시 이벤트 처리 (class 명으로 가져오기)
     // document.querySelector("page").addEventListener("click", function (e) {//메인 영역에서만 이벤트 발생
-        $(document).on("click", ".page", function (e) {
+    $(document).on("click", ".page", function (e) {
         var myPgNum = $(".active").attr('id');// active 되어있는 페이지 id 값
         var real_pg = myPgNum.slice(1); // id값 앞에 붙은 p 떼어내기
         var clickableArea = "pg_" + real_pg + "_answer";
@@ -141,26 +145,28 @@ window.addEventListener("resize", () => {
                     }
                 }
             }
-    
+
             //암것도 없으면 모달 띄우기
             else {
                 next();//다음 페이지로 이동
             }
-    
+
         } else {
             //틀리게 클릭하면
             $('#staticBackdrop').modal('show');
         }
-    
-    
-        //----------- 모달 내부 내용 넣기 -----------------------
-        // if (page_num == 0) {
-        //     $('.modal-body').text(introModalCont);
-        // } else {
-        //     $('.modal-body').text(instruction);
-        // }
-        $('.modal-body').html(tryAginMsg);
 
+        // main에서 정답 이외의 영역 클릭시 모달 띄우고 fail 횟수 증가
+        $('.modal-body').html(tryAginMsg);
+        var fail = currScn + 'fail';
+        var currFail = parse_data.user_data[parsingNum][fail];
+        if (currFail == "") {
+            parse_data.user_data[parsingNum][fail] = 1;
+            localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+        } else {
+            parse_data.user_data[parsingNum][fail] += 1;
+            localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+        }
 
     });
 });
