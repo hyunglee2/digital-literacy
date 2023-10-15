@@ -1,3 +1,7 @@
+.main {
+    border : unset !important;
+}
+
 .bigImg {
     width: 90%;
 }
@@ -65,7 +69,7 @@ button {
         background: white !important;
     }
 
-    #view_wrap {
+    #view {
         background: white !important;
     }
 

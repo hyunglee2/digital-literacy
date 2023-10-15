@@ -24,21 +24,21 @@
             <div id="view">
                 <main class="main" , id="main" , role="main">
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop">
-                        <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                                <div class="modal-header border-0">
-                                </div>
-                                <div class="modal-body">
-                                    모달 내용
-                                </div>
-                                <div class="modal-footer border-0 ">
-                                    <button type="button" class="btn btn-secondary btn-lg"
-                                        data-bs-dismiss="modal">확인</button>
-                                </div>
+                  <div class="modal fade" id="staticBackdrop">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                            </div>
+                            <div class="modal-body">
+                                모달 내용
+                            </div>
+                            <div class="modal-footer border-0 ">
+                                <button type="button" class="btn btn-secondary btn-lg"
+                                    data-bs-dismiss="modal">확인</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
                     <!------------------------------ page 1 ------------------------------>
                     <div class="page center" id="p1">
@@ -48,9 +48,9 @@
                                   <img src='./index.jpg' alt="Intro Image" />
                                 </div>
                                 <div class='input_wrap'>
-                                        <input class="form-control" id="userId" placeholder="사용자 ID를 입력해야 버튼이 활성화됩니다.">
+                                        <input class="form-control" id="userId" placeholder="사용자 ID를 입력해주세요.">
                                   </div>
-                                  <button type="button" id='idSubmitBtn' onclick="location.href='./survey/survey.html'" class="btn btn-warning text-bold">시작하기</button>
+                                  <button type="button" id='idSubmitBtn' class="btn btn-warning text-bold">시작하기</button>
                                 </div>
                               </div>
                         </div>
@@ -60,7 +60,6 @@
         </div>
     </div>
     <script src="pg_info.js"> </script>
-    <script src="./common/js/pg_handler.js"> </script>
     <script src="./common/js/localstorage.js"> </script>
 </body>
 
