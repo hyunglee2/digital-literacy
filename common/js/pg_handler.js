@@ -121,8 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (e.target.className.includes(clickableArea)) {//맞게 클릭하면
 
-            //----선택 3개 해야 하는 경우 -------------------
-            //selc_3_input pg_n_answer input_(셀렉트 넘버)
             if (e.target.className.includes("end_pt")) {
                 var succ = currScn + 'succ';
                 parse_data.user_data[parsingNum][succ] = 1;

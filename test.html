@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directual API 예제</title>
+</head>
+
+<body>
+    <button id="postButton">POST 데이터 전송</button>
+
+    <script>
+        // 클릭 시 JSON을 POST하는 함수
+        const postData = async () => {
+            // 대상 API 엔드포인트 URL
+            const apiUrl = 'https://api.directual.com/good/api/v5/webHook/getdata_h?appID=2af228bd-44ba-4f16-8f3b-095248a39606';
+
+            // POST할 데이터(JSON 형식)
+            const postData = `{
+    "user_data": [
+      {
+        "71succ": "1",
+        "71fail": "13",
+        "71ded": ""
+      },
+      {
+        "72succ": "",
+        "72fail": "",
+        "72ded": ""
+      },
+      {
+        "73succ": "",
+        "73fail": "",
+        "73ded": ""
+      },
+      {
+        "74succ": "",
+        "74fail": "",
+        "74ded": ""
+      },
+      {
+        "75succ": "",
+        "75fail": "",
+        "75ded": ""
+      },
+      {
+        "sum": ""
+      }
+    ]
+  }`;
+
+            try {
+                // Fetch API를 사용하여 POST 요청 수행
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // 필요한 경우, 인증 토큰 등의 헤더도 여기에 추가
+                    },
+                    body: JSON.stringify(postData),
+                });
+
+                // 응답 확인 및 처리
+                if (response.ok) {
+                    console.log('데이터가 성공적으로 전송되었습니다.');
+                } else {
+                    console.error('데이터 전송 실패:', response.status, response.statusText);
+                }
+            } catch (error) {
+                console.error('에러 발생:', error.message);
+            }
+        };
+
+        // 버튼 클릭 시 postData 함수 호출
+        document.getElementById('postButton').addEventListener('click', postData);
+    </script>
+</body>
+
+</html>
