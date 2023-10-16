@@ -78,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //스킵 버튼 : 클릭 시 다음 시나리오로 이동, 해당 씬 성공여부 = 0
     $(document).on("click", ".skip_btn", function () {
-        alert('스킵');
         var succ = currScn + 'succ';
         parse_data.user_data[parsingNum][succ] = 0;
         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장

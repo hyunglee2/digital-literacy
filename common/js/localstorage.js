@@ -38,6 +38,8 @@ const user_data = `{
     ]
   }`;
 
+
+// Routing 역할 위함
 // 현재 페이지의 URL을 가져와 경로부분 추출, 확장자는 제거
 var currURL = window.location.href;
 var pathArray = currURL.split('/');
