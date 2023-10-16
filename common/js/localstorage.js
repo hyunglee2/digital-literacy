@@ -43,21 +43,27 @@ var currURL = window.location.href;
 var pathArray = currURL.split('/');
 var currPage = pathArray[pathArray.length - 1].replace(".html", "");
 console.log("현재 HTML 파일 이름: " + currPage);
-var currScn;
 
-// switch 문 대신 if-else if 구문 사용
+
+var currScn;
+var nextPage;
+
 if (currPage === "map") {
     currScn = 71;
     parsingNum = 0;
+    nextPage = "train";
 } else if (currPage === "train") {
     currScn = 72;
     parsingNum = 1;
+    nextPage = "order";
 } else if (currPage === "order") {
     currScn = 73;
     parsingNum = 2;
+    nextPage = "talk";
 } else if (currPage === "talk") {
     currScn = 74;
     parsingNum = 3;
+    nextPage = "bank";
 } else if (currPage === "bank") {
     currScn = 75;
     parsingNum = 4;

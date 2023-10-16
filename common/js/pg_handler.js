@@ -41,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //*******************************************************************************
     //**************************+   페이지 전환   +*********************************** 
 
-
-
     // 페이지 표시
     function showPage(id) {
         init();
@@ -78,6 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.modal-body').html(instruction);
     });
 
+    //스킵 버튼 : 클릭 시 다음 시나리오로 이동, 해당 씬 성공여부 = 0
+    $(document).on("click", ".skip_btn", function () {
+        alert('스킵');
+        var succ = currScn + 'succ';
+        parse_data.user_data[parsingNum][succ] = 0;
+        localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+        location.href = "../" + nextPage + "/" + nextPage + ".html";
+    });
 
     //*******************************************************************************
     //**************************+    클릭 제어   +*********************************** 
@@ -104,14 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // document.querySelector("main").addEventListener("click", function (e) {
-    //     $('#staticBackdrop').modal('show');
-    // }
-    // )
-
-
-
-
 
     //특정 영역 외 클릭시 이벤트 처리 (class 명으로 가져오기)
     // document.querySelector("page").addEventListener("click", function (e) {//메인 영역에서만 이벤트 발생
@@ -120,30 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
         var real_pg = myPgNum.slice(1); // id값 앞에 붙은 p 떼어내기
         var clickableArea = "pg_" + real_pg + "_answer";
 
-        //if (page_num == pageClickArea[i].page) {//현재 페이지와 pageClickArea의 페이지 같으면
-        // let clickableArea = pageClickArea[real_pg].correctAnswer; //페이지별 선택 영역 정답 불러오기
         let inputableAnswer = inputAnswer[real_pg].inputableAnswer;//페이지별 입력 정답 불러오기
-        // let instruction = modalCont[real_pg].instruction;//페이지별 모달 내용 불러오기
-        // let introModalCont = modalCont[0].instruction;//첫 번째 페이지 모달 내용
-        if (e.target.className.includes(clickableArea)) {
-            //맞게 클릭하면
+
+        if (e.target.className.includes(clickableArea)) {//맞게 클릭하면
 
             //----선택 3개 해야 하는 경우 -------------------
             //selc_3_input pg_n_answer input_(셀렉트 넘버)
-            if (e.target.className.includes("selc_3")) {
-                for (j = 0; j <= 3; j++) {
-                    if (e.target.className.includes("input_" + j)) {
-                        selc3Arr.push(j);
-                        const set = new Set(selc3Arr);
-                        selc3Arr = [...set];
-                        console.log(selc3Arr);
-                        console.log(selc3Arr.length)
-                        $(".pg_" + real_pg + "_css_edit_" + j).addClass("pg_" + real_pg + "_selected_css");
-                        if (selc3Arr.length == 3) {
-                            $(".selc_next_btn").addClass("pg_" + real_pg + "_answer");
-                        }
-                    }
-                }
+            if (e.target.className.includes("end_pt")) {
+                var succ = currScn + 'succ';
+                parse_data.user_data[parsingNum][succ] = 1;
+                localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                location.href = "../" + nextPage + "/" + nextPage + ".html";
             }
 
             //암것도 없으면 모달 띄우기
@@ -154,18 +139,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             //틀리게 클릭하면
             $('#staticBackdrop').modal('show');
-        }
 
-        // main에서 정답 이외의 영역 클릭시 모달 띄우고 fail 횟수 증가
-        $('.modal-body').html(tryAginMsg);
-        var fail = currScn + 'fail';
-        var currFail = parse_data.user_data[parsingNum][fail];
-        if (currFail == "") {
-            parse_data.user_data[parsingNum][fail] = 1;
-            localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
-        } else {
-            parse_data.user_data[parsingNum][fail] += 1;
-            localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+            // page에서 정답 이외의 영역 클릭시 모달 띄우고 fail 횟수 증가
+            $('.modal-body').html(tryAginMsg);
+            var fail = currScn + 'fail';
+            var currFail = parse_data.user_data[parsingNum][fail];
+            if (currFail == "") {
+                parse_data.user_data[parsingNum][fail] = 1;
+                localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+            } else {
+                parse_data.user_data[parsingNum][fail] += 1;
+                localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+            }
         }
 
     });
