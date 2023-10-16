@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //스킵 버튼 : 클릭 시 다음 시나리오로 이동, 해당 씬 성공여부 = 0
     $(document).on("click", ".skip_btn", function () {
         var succ = currScn + 'succ';
-        parse_data.user_data[parsingNum][succ] = 0;
+        parse_data.user_data[parsingNum][succ] = false;
         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
         location.href = "../" + nextPage + "/" + nextPage + ".html";
     });
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (e.target.className.includes("end_pt")) {
                 var succ = currScn + 'succ';
-                parse_data.user_data[parsingNum][succ] = 1;
+                parse_data.user_data[parsingNum][succ] = true;
                 localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                 location.href = "../" + nextPage + "/" + nextPage + ".html";
             }
