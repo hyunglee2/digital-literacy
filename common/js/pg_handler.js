@@ -121,11 +121,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (e.target.className.includes(clickableArea)) {//맞게 클릭하면
 
+            // 시나리오 마지막 부분
             if (e.target.className.includes("end_pt")) {
                 var succ = currScn + 'succ';
                 parse_data.user_data[parsingNum][succ] = true;
                 localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                 location.href = "../" + nextPage + "/" + nextPage + ".html";
+            }
+
+            // 자동 페이지 넘김 : train/p2, 
+            //answer_auto_txt pg_n_answer n_input
+            else if (e.target.className.includes("answer_auto_txt")) {
+                if(doubleSubmitCheck()) return;
+                //키보드 떼고 값 일치하면 다음 버튼 활성화되게 
+                $('.' + real_pg + '_input').keyup(function () {
+                    
+                    console.log('hhh')
+                    let unspacedValue = this.value.split(' ').join('');
+                    if (unspacedValue == inputableAnswer) {
+                        next();
+                    } else {
+                        return false;
+                    }
+                    if(doubleSubmitCheck()) return;
+                    console.log('kkk')
+                });
+                // 엔터 쳤을 때 입력 내용이 정답과 다르면 실패 횟수 증가
+                $('.' + real_pg + '_input').keypress(function (event) {
+                    if (event.which === 13) {
+                        let unspacedValue = this.value.split(' ').join('');
+                        if (unspacedValue != inputableAnswer) {
+                            $('#staticBackdrop').modal('show');
+                            $('.modal-body').html(tryAginMsg);
+                            var fail = currScn + 'fail';
+                            var currFail = parse_data.user_data[parsingNum][fail];
+                            if (currFail == "") {
+                                parse_data.user_data[parsingNum][fail] = 1;
+                                localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                            } else {
+                                parse_data.user_data[parsingNum][fail] += 1;
+                                localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                            }
+                        }
+                    }
+                });
+
             }
 
             //암것도 없으면 모달 띄우기

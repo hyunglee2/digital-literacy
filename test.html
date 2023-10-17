@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <title>Directual API 예제</title>
 </head>
 
@@ -11,59 +12,54 @@
   <button id="postButton">POST 데이터 전송</button>
 
   <script>
-    // 클릭 시 JSON을 POST하는 함수
-    const postData = async () => {
-      // 대상 API 엔드포인트 URL
-      const apiUrl = 'https://api.directual.com/good/api/v5/webHook/getdata_h?appID=2af228bd-44ba-4f16-8f3b-095248a39606';
+    $(document).on("click", "#postButton", function () {
 
-      // POST할 데이터(JSON 형식)
-      const postData = `{
-    
-      {
-        "71succ": "true",
-        "71fail": "13",
-        "71ded": ""
-      },
-      {
-        "72succ": "",
-        "72fail": "",
-        "72ded": ""
-      },
-      {
-        "73succ": "",
-        "73fail": "",
-        "73ded": ""
-      },
-      {
-        "74succ": "",
-        "74fail": "",
-        "74ded": ""
-      },
-      {
-        "75succ": "",
-        "75fail": "",
-        "75ded": ""
-      },
-      {
-        "sum": ""
-      }
-    
-  }`;
+      const parse_data = [
+        {
+          "71succ": "",
+          "71fail": "",
+          "71ded": ""
+        },
+        {
+          "72succ": "",
+          "72fail": "",
+          "72ded": ""
+        },
+        {
+          "73succ": "",
+          "73fail": "",
+          "73ded": ""
+        },
+        {
+          "74succ": "",
+          "74fail": "",
+          "74ded": ""
+        },
+        {
+          "75succ": "",
+          "75fail": "",
+          "75ded": ""
+        },
+        {
+          "sum": ""
+        }
+      ]
 
-      fetch('https://api.directual.com/good/api/v5/data/getdata7/getdata7?appID=2af228bd-44ba-4f16-8f3b-095248a39606&sessionID=', {
+      console.log(JSON.stringify(parse_data));
+
+      fetch('https://cors-anywhere.herokuapp.comhttps://api.directual.com/good/api/v5/data/getdata7/getdata7?appID=2af228bd-44ba-4f16-8f3b-095248a39606&sessionID=', {
         method: 'POST',
-        body: JSON.stringify(postData),
+        body: JSON.stringify(parse_data),
         headers: {
           'Content-Type': 'application/json'
         },
       }).then(res => {
         console.log(res.json())
       })
-      
-    };
 
-    // 버튼 클릭 시 postData 함수 호출
-    document.getElementById('postButton').addEventListener('click', postData);
+
+
+    });
   </script>
 </body>
 

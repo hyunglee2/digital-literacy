@@ -2,352 +2,1139 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Digital Literacy</title>
-    <meta name="viewport"
-        content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-    <link href="../common/styles/font.css" rel="stylesheet" />
-    <link href="../common/styles/common.css" rel="stylesheet" />
-    <link href="./styles/layout.css" rel="stylesheet" />
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Digital Literacy</title>
+  <meta name="viewport"
+    content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link href="../common/styles/font.css" rel="stylesheet" />
+  <link href="../common/styles/common.css" rel="stylesheet" />
+  <link href="./styles/layout.css" rel="stylesheet" />
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
-    <div id="bg_phone">
-        <div id="view_wrap">
-            <div id="view">
-                <main class="main main-93" , id="main" , role="main">
-                    <!-- Modal : instruction -->
-                    <div class="modal fade" id="modalForInit">
-                      <div class="modal-dialog modal-lg modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header border-0">
-                              </div>
-                              <div class="modal-body">
-                                  모달 내용
-                              </div>
-                              <div class="modal-footer border-0 ">
-                                  <button type="button" class="btn btn-secondary btn-lg"
-                                      data-bs-dismiss="modal">확인</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop">
-                      <div class="modal-dialog modal-sm modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header border-0">
-                              </div>
-                              <div class="modal-body">
-                                  모달 내용
-                              </div>
-                              <div class="modal-footer border-0 ">
-                                  <button type="button" class="btn btn-secondary btn-lg"
-                                      data-bs-dismiss="modal">확인</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                    <!------------------------------ page 1 ------------------------------>
-                    <div class='page' id='p1'>
-                        <div class='page_wrap'>
-                          <div class='top_bar'>
-                            <div></div>
-                            <div class='txt'>
-                              승차권 예매
-                            </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                            </svg>
-                          </div>
-                          <div class='scroller'>
-                            <div class='tab tab1'>
-                              <div class='left'>
-                                <div>출발</div>
-                              </div>
-                              <div class='cntr'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                                </svg>
-                              </div>
-                              <div class='right'>
-                                <div>도착</div>
-                              </div>
-                            </div>
-                            <div class='tab'>
-                              <div class='left pg_1_answer'>
-                                <div class="pg_1_answer">용산</div>
-                              </div>
-                              <div class='cntr'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                              </div>
-                              <div class='right'>
-                                <div>오송</div>
-                              </div>
-                            </div>
-                            <div class='tab'>
-                              <div class=''>KTX역 선택 지도</div>
-                            </div>
-                            <div class='line_wrap tab'><div class='line'></div></div>
-                            <div class='tab info_tab'>
-                              <div class='txt blue'>출발일</div>
-                              <div class='txt'>2023년 9월 19일 (화) 03:03</div>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                              </svg>
-                            </div>
-                            <div class='line_wrap tab'><div class='line'></div></div>
-                            <div class='tab info_tab'>
-                              <div class='txt blue'>승객 연령 및 좌석수</div>
-                              <div class='txt'>어른 1명</div>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                              </svg>
-                            </div>
-                            <div class='line_wrap tab'><div class='line'></div></div>
-                            <div class='tab info_tab'>
-                              <div class='txt blue'>상세 옵션</div>
-                              <div class='txt'>인접역 표출, SR 연게 표출</div>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                              </svg>
-                            </div>
-                            <div class='line_wrap'><div class='line'></div></div>
-                
-                              <div class='tab btn_tab'>
-                                <div class='left navy'>간편구매 등록</div>
-                                <div class='right navy'>열차 조회하기</div>
-                              </div>
-                              <div class='menu_tab'>
-                                <div class='icon_wrap'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="navy bi bi-train-freight-front" viewBox="0 0 16 16">
-                                    <path d="M5.065.158A1.5 1.5 0 0 1 5.736 0h4.528a1.5 1.5 0 0 1 .67.158l3.237 1.618a1.5 1.5 0 0 1 .83 1.342V13.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V3.118a1.5 1.5 0 0 1 .828-1.342L5.065.158ZM2 9.372V13.5A1.5 1.5 0 0 0 3.5 15h4V8h-.853a.5.5 0 0 0-.144.021L2 9.372ZM8.5 15h4a1.5 1.5 0 0 0 1.5-1.5V9.372l-4.503-1.35A.5.5 0 0 0 9.353 8H8.5v7ZM14 8.328v-5.21a.5.5 0 0 0-.276-.447l-3.236-1.618A.5.5 0 0 0 10.264 1H5.736a.5.5 0 0 0-.223.053L2.277 2.67A.5.5 0 0 0 2 3.118v5.21l1-.3V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.028l1 .3Zm-2-.6V5H8.5v2h.853a1.5 1.5 0 0 1 .431.063L12 7.728ZM7.5 7V5H4v2.728l2.216-.665A1.5 1.5 0 0 1 6.646 7H7.5Zm-1-5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm-3 8a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1ZM5 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
-                                  </svg>
-                                  <div class='txt navy'>승차권 예매</div>
-                                </div>
-                                <div class='icon_wrap'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="gray bi bi-coin" viewBox="0 0 16 16">
-                                    <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
-                                  </svg>
-                                  <div class='txt gray'>할인·정기권</div>
-                                </div>
-                                <div class='icon_wrap'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="gray bi bi-suitcase" viewBox="0 0 16 16">
-                                    <path d="M6 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 6 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 10 5Z" />
-                                    <path d="M6.5 0a.5.5 0 0 0-.5.5V3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 1.031 1.75A1.003 1.003 0 0 0 5 16a1 1 0 0 0 1-1h4a1 1 0 1 0 1.969-.25A2 2 0 0 0 13 13V5a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-.5-.5h-3ZM9 3H7V1h2v2Zm3 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v8Z" />
-                                  </svg>
-                                  <div class='txt gray'>관관상품</div>
-                                </div>
-                                <div class='icon_wrap'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="gray bi bi-ticket-perforated" viewBox="0 0 16 16">
-                                    <path d="M4 4.85v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Z" />
-                                    <path d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3h-13ZM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9V4.5Z" />
-                                  </svg>
-                                  <div class='txt gray'>승차권확인</div>
-                                </div>
-                              </div>
-                
-                          </div>
-                        </div>
-                      </div>
-                    <!------------------------------ page 2 ------------------------------>
-                    <div class="page" id="p2">
-                      <div class='page_wrap'>
-                        <div class='top_bar'>
-                          <div></div>
-                          <div class='txt'>
-                            승차권 예매
-                          </div>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                          </svg>
-                        </div>
-                        <div class=''>
-                          <div class='tab tab1'>
-                            <div class='left'>
-                              <div>출발</div>
-                            </div>
-                            <div class='cntr'>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                              </svg>
-                            </div>
-                            <div class='right'>
-                              <div>도착</div>
-                            </div>
-                          </div>
-                          <div class='tab'>
-                            <div class='left'>
-                              <div>용산</div>
-                            </div>
-                            <div class='cntr'>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                              </svg>
-                            </div>
-                            <div class='right'>
-                              <div>오송</div>
-                            </div>
-                          </div>
-                          <div class='tab'>
-                            <div class='pg_2_answer'>KTX역 선택 지도</div>
-                          </div>
-                          <div class='blank'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
-                              <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                            </svg>
-                          </div>
-                          <div class='scroller stations'>
-                            <div class="form-floating">
-                              <input class="form-control " id="exampleFormControlInput1" placeholder="역 명의 초성 또는 전체를 입력해주세요." />              
-                            </div>
-                            <div class='tab_filled navy text-bold'>가까운역</div>
-                            <div class='list_wrap'>
-                              <div class='li left'>청주</div>
-                              <div class='li'>오근장</div>
-                            </div>
-                            <div class='tab_filled navy text-bold'>주요역</div>
-                            <div class='list_wrap'>
-                              <div class='li left'>서울</div>
-                              <div class='li'>용산</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>광명</div>
-                              <div class='li'>영등포</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>수원</div>
-                              <div class='li'>평택</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>천안아산</div>
-                              <div class='li'>천안</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>오송</div>
-                              <div class='li'>조치원</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>대전</div>
-                              <div class='li'>서대전</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>김천구미</div>
-                              <div class='li'>구미</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>동대구</div>
-                              <div class='li'>대구</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>울산(통도사)</div>
-                              <div class='li'>포항</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>경산</div>
-                              <div class='li'>밀양</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>부산</div>
-                              <div class='li'>신경주</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>구포</div>
-                              <div class='li'>창원중앙</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>평창</div>
-                              <div class='li'>진부(오대산)</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>강릉</div>
-                              <div class='li'>익산</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>전주</div>
-                              <div class='li'>광주송정</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>목포</div>
-                              <div class='li'>순천</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>청량리</div>
-                              <div class='li'>여수EXPO</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>동해</div>
-                              <div class='li'>정동진</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>안동</div>
-                              <div class='li'>서원주</div>
-                            </div>
-                            <div class='list_wrap'>
-                              <div class='li left'>원주</div>
-                              <div class='li'>마산</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!------------------------------ page 3 ------------------------------>
-                    <div class="page" id="p3">
-                        <div class='page_wrap center'>
-                        </div>
-                    </div>
-                    <!------------------------------ page 4 ------------------------------>
-                    <div class="page" id="p4">
-                        <div class='page_wrap center'>
-                        </div>
-                    </div>
-                    <!------------------------------ page 5 ------------------------------>
-                    <div class="page" id="p5">
-                        <div class='page_wrap center'>
-                        </div>
-                    </div>
-                </main>
-                <div class="ctrlbar" id="ctrlbar">
-                  <div class="bottom_bar px-3 py-3">
-                      <div class="text-x-large text-bold"></div>
-                      <div id="help_btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                              class="bi bi-question-circle" viewBox="0 0 16 16">
-                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                              <path
-                                  d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
-                          </svg>
-                      </div>
-                      <div class="skip_btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                              class="bi bi-skip-end-fill" viewBox="0 0 16 16">
-                              <path
-                                  d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z" />
-                          </svg>
-                      </div>
-                  </div>
+  <div id="bg_phone">
+    <div id="view_wrap">
+      <div id="view">
+        <main class="main main-93" , id="main" , role="main">
+          <!-- Modal : instruction -->
+          <div class="modal fade" id="modalForInit">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                </div>
+                <div class="modal-body">
+                  모달 내용
+                </div>
+                <div class="modal-footer border-0 ">
+                  <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">확인</button>
+                </div>
               </div>
             </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                </div>
+                <div class="modal-body">
+                  모달 내용
+                </div>
+                <div class="modal-footer border-0 ">
+                  <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">확인</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------ page 1 ------------------------------>
+          <div class='page' id='p1'>
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class='scroller'>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left pg_1_answer'>
+                    <div class="pg_1_answer">용산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>오송</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>출발일</div>
+                  <div class='txt'>2023년 9월 19일 (화) 03:03</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>승객 연령 및 좌석수</div>
+                  <div class='txt'>어른 1명</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>상세 옵션</div>
+                  <div class='txt'>인접역 표출, SR 연게 표출</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap'>
+                  <div class='line'></div>
+                </div>
+                </div>
+                <div class='bottom_tab'>
+                  <div class='tab btn_tab'>
+                    <div class='left navy'>간편구매 등록</div>
+                    <div class='right navy'>열차 조회하기</div>
+                  </div>
+                  <div class='menu_tab'>
+                    <div class='icon_wrap blue'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class=" bi bi-train-freight-front" viewBox="0 0 16 16">
+                        <path
+                          d="M5.065.158A1.5 1.5 0 0 1 5.736 0h4.528a1.5 1.5 0 0 1 .67.158l3.237 1.618a1.5 1.5 0 0 1 .83 1.342V13.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V3.118a1.5 1.5 0 0 1 .828-1.342L5.065.158ZM2 9.372V13.5A1.5 1.5 0 0 0 3.5 15h4V8h-.853a.5.5 0 0 0-.144.021L2 9.372ZM8.5 15h4a1.5 1.5 0 0 0 1.5-1.5V9.372l-4.503-1.35A.5.5 0 0 0 9.353 8H8.5v7ZM14 8.328v-5.21a.5.5 0 0 0-.276-.447l-3.236-1.618A.5.5 0 0 0 10.264 1H5.736a.5.5 0 0 0-.223.053L2.277 2.67A.5.5 0 0 0 2 3.118v5.21l1-.3V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.028l1 .3Zm-2-.6V5H8.5v2h.853a1.5 1.5 0 0 1 .431.063L12 7.728ZM7.5 7V5H4v2.728l2.216-.665A1.5 1.5 0 0 1 6.646 7H7.5Zm-1-5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm-3 8a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1ZM5 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+                      </svg>
+                      <div class='txt '>승차권 예매</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-coin" viewBox="0 0 16 16">
+                        <path
+                          d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                      </svg>
+                      <div class='txt lightgray'>할인·정기권</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-suitcase" viewBox="0 0 16 16">
+                        <path
+                          d="M6 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 6 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 10 5Z" />
+                        <path
+                          d="M6.5 0a.5.5 0 0 0-.5.5V3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 1.031 1.75A1.003 1.003 0 0 0 5 16a1 1 0 0 0 1-1h4a1 1 0 1 0 1.969-.25A2 2 0 0 0 13 13V5a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-.5-.5h-3ZM9 3H7V1h2v2Zm3 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v8Z" />
+                      </svg>
+                      <div class='txt lightgray'>관관상품</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-ticket-perforated" viewBox="0 0 16 16">
+                        <path
+                          d="M4 4.85v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Z" />
+                        <path
+                          d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3h-13ZM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9V4.5Z" />
+                      </svg>
+                      <div class='txt lightgray'>승차권확인</div>
+                    </div>
+                  </div>
+                </div >
+            </div>
+          </div>
+          <!------------------------------ page 2 ------------------------------>
+          <div class="page" id="p2">
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class=''>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left'>
+                    <div>용산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>오송</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                <div class='blank'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='scroller stations'>
+                  <div class="input_wrap">
+                    <input class="form-control answer_auto_txt pg_2_answer 2_input" id="exampleFormControlInput1"
+                      placeholder="역 명의 초성 또는 전체를 입력해주세요." />
+
+                  </div>
+                  <div class='tab_filled navy text-bold'>가까운역</div>
+                  <div class='list_wrap'>
+                    <div class='li left'>청주</div>
+                    <div class='li'>오근장</div>
+                  </div>
+                  <div class='tab_filled navy text-bold'>주요역</div>
+                  <div class='list_wrap'>
+                    <div class='li left'>서울</div>
+                    <div class='li'>용산</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>광명</div>
+                    <div class='li'>영등포</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>수원</div>
+                    <div class='li'>평택</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>천안아산</div>
+                    <div class='li'>천안</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>오송</div>
+                    <div class='li'>조치원</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>대전</div>
+                    <div class='li'>서대전</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>김천구미</div>
+                    <div class='li'>구미</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>동대구</div>
+                    <div class='li'>대구</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>울산(통도사)</div>
+                    <div class='li'>포항</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>경산</div>
+                    <div class='li'>밀양</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>부산</div>
+                    <div class='li'>신경주</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>구포</div>
+                    <div class='li'>창원중앙</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>평창</div>
+                    <div class='li'>진부(오대산)</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>강릉</div>
+                    <div class='li'>익산</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>전주</div>
+                    <div class='li'>광주송정</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>목포</div>
+                    <div class='li'>순천</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>청량리</div>
+                    <div class='li'>여수EXPO</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>동해</div>
+                    <div class='li'>정동진</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>안동</div>
+                    <div class='li'>서원주</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>원주</div>
+                    <div class='li'>마산</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------ page 3 ------------------------------>
+          <div class="page" id="p3">
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class=''>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left'>
+                    <div>용산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>오송</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                <div class='blank'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='scroller stations'>
+                  <div class="input_wrap">
+                    <input class="form-control" id="exampleFormControlInput1" placeholder="부산" disabled />
+
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left pg_3_answer'>부산</div>
+                    <div class='li'>&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------ page 4 ------------------------------>
+          <div class="page" id="p4">
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class='scroller'>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left '>
+                    <div class="">부산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right pg_4_answer'>
+                    <div class="pg_4_answer">오송</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>출발일</div>
+                  <div class='txt'>2023년 9월 19일 (화) 03:03</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>승객 연령 및 좌석수</div>
+                  <div class='txt'>어른 1명</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>상세 옵션</div>
+                  <div class='txt'>인접역 표출, SR 연게 표출</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap'>
+                  <div class='line'></div>
+                </div>
+                </div>
+                <div class='bottom_tab'>
+                  <div class='tab btn_tab'>
+                    <div class='left navy'>간편구매 등록</div>
+                    <div class='right navy'>열차 조회하기</div>
+                  </div>
+                  <div class='menu_tab'>
+                    <div class='icon_wrap blue'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class=" bi bi-train-freight-front" viewBox="0 0 16 16">
+                        <path
+                          d="M5.065.158A1.5 1.5 0 0 1 5.736 0h4.528a1.5 1.5 0 0 1 .67.158l3.237 1.618a1.5 1.5 0 0 1 .83 1.342V13.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V3.118a1.5 1.5 0 0 1 .828-1.342L5.065.158ZM2 9.372V13.5A1.5 1.5 0 0 0 3.5 15h4V8h-.853a.5.5 0 0 0-.144.021L2 9.372ZM8.5 15h4a1.5 1.5 0 0 0 1.5-1.5V9.372l-4.503-1.35A.5.5 0 0 0 9.353 8H8.5v7ZM14 8.328v-5.21a.5.5 0 0 0-.276-.447l-3.236-1.618A.5.5 0 0 0 10.264 1H5.736a.5.5 0 0 0-.223.053L2.277 2.67A.5.5 0 0 0 2 3.118v5.21l1-.3V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.028l1 .3Zm-2-.6V5H8.5v2h.853a1.5 1.5 0 0 1 .431.063L12 7.728ZM7.5 7V5H4v2.728l2.216-.665A1.5 1.5 0 0 1 6.646 7H7.5Zm-1-5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm-3 8a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1ZM5 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+                      </svg>
+                      <div class='txt '>승차권 예매</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-coin" viewBox="0 0 16 16">
+                        <path
+                          d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                      </svg>
+                      <div class='txt lightgray'>할인·정기권</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-suitcase" viewBox="0 0 16 16">
+                        <path
+                          d="M6 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 6 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 10 5Z" />
+                        <path
+                          d="M6.5 0a.5.5 0 0 0-.5.5V3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 1.031 1.75A1.003 1.003 0 0 0 5 16a1 1 0 0 0 1-1h4a1 1 0 1 0 1.969-.25A2 2 0 0 0 13 13V5a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-.5-.5h-3ZM9 3H7V1h2v2Zm3 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v8Z" />
+                      </svg>
+                      <div class='txt lightgray'>관관상품</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-ticket-perforated" viewBox="0 0 16 16">
+                        <path
+                          d="M4 4.85v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Z" />
+                        <path
+                          d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3h-13ZM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9V4.5Z" />
+                      </svg>
+                      <div class='txt lightgray'>승차권확인</div>
+                    </div>
+                  </div>
+                </div >
+            </div>
+          </div>
+          <!------------------------------ page 5 ------------------------------>
+          <div class="page" id="p5">
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class=''>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left'>
+                    <div>부산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>오송</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                <div class='blank'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='scroller stations'>
+                  <div class="input_wrap">
+                    <input class="form-control answer_auto_txt pg_5_answer 5_input" id="exampleFormControlInput1"
+                      placeholder="역 명의 초성 또는 전체를 입력해주세요." />
+
+                  </div>
+                  <div class='tab_filled navy text-bold'>가까운역</div>
+                  <div class='list_wrap'>
+                    <div class='li left'>청주</div>
+                    <div class='li'>오근장</div>
+                  </div>
+                  <div class='tab_filled navy text-bold'>주요역</div>
+                  <div class='list_wrap'>
+                    <div class='li left'>서울</div>
+                    <div class='li'>용산</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>광명</div>
+                    <div class='li'>영등포</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>수원</div>
+                    <div class='li'>평택</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>천안아산</div>
+                    <div class='li'>천안</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>오송</div>
+                    <div class='li'>조치원</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>대전</div>
+                    <div class='li'>서대전</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>김천구미</div>
+                    <div class='li'>구미</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>동대구</div>
+                    <div class='li'>대구</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>울산(통도사)</div>
+                    <div class='li'>포항</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>경산</div>
+                    <div class='li'>밀양</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>부산</div>
+                    <div class='li'>신경주</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>구포</div>
+                    <div class='li'>창원중앙</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>평창</div>
+                    <div class='li'>진부(오대산)</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>강릉</div>
+                    <div class='li'>익산</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>전주</div>
+                    <div class='li'>광주송정</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>목포</div>
+                    <div class='li'>순천</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>청량리</div>
+                    <div class='li'>여수EXPO</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>동해</div>
+                    <div class='li'>정동진</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>안동</div>
+                    <div class='li'>서원주</div>
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left'>원주</div>
+                    <div class='li'>마산</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------ page 6 ------------------------------>
+          <div class="page" id="p6">
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class=''>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left'>
+                    <div>용산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>오송</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                <div class='blank'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='scroller stations'>
+                  <div class="input_wrap">
+                    <input class="form-control" id="exampleFormControlInput1" placeholder="서울" disabled />
+
+                  </div>
+                  <div class='list_wrap'>
+                    <div class='li left pg_6_answer'>서울</div>
+                    <div class='li'>&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------ page 7 ------------------------------>
+          <div class='page' id='p7'>
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class='scroller'>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left '>
+                    <div class="">부산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>서울</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>출발일</div>
+                  <div class='txt pg_7_answer'>2023년 9월 19일 (화) 03:03</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>승객 연령 및 좌석수</div>
+                  <div class='txt'>어른 1명</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap tab'>
+                  <div class='line'></div>
+                </div>
+                <div class='tab info_tab'>
+                  <div class='txt blue'>상세 옵션</div>
+                  <div class='txt'>인접역 표출, SR 연게 표출</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                  </svg>
+                </div>
+                <div class='line_wrap'>
+                  <div class='line'></div>
+                </div>
+                </div>
+                <div class='bottom_tab'>
+                  <div class='tab btn_tab'>
+                    <div class='left navy'>간편구매 등록</div>
+                    <div class='right navy'>열차 조회하기</div>
+                  </div>
+                  <div class='menu_tab'>
+                    <div class='icon_wrap blue'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class=" bi bi-train-freight-front" viewBox="0 0 16 16">
+                        <path
+                          d="M5.065.158A1.5 1.5 0 0 1 5.736 0h4.528a1.5 1.5 0 0 1 .67.158l3.237 1.618a1.5 1.5 0 0 1 .83 1.342V13.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V3.118a1.5 1.5 0 0 1 .828-1.342L5.065.158ZM2 9.372V13.5A1.5 1.5 0 0 0 3.5 15h4V8h-.853a.5.5 0 0 0-.144.021L2 9.372ZM8.5 15h4a1.5 1.5 0 0 0 1.5-1.5V9.372l-4.503-1.35A.5.5 0 0 0 9.353 8H8.5v7ZM14 8.328v-5.21a.5.5 0 0 0-.276-.447l-3.236-1.618A.5.5 0 0 0 10.264 1H5.736a.5.5 0 0 0-.223.053L2.277 2.67A.5.5 0 0 0 2 3.118v5.21l1-.3V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.028l1 .3Zm-2-.6V5H8.5v2h.853a1.5 1.5 0 0 1 .431.063L12 7.728ZM7.5 7V5H4v2.728l2.216-.665A1.5 1.5 0 0 1 6.646 7H7.5Zm-1-5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm-3 8a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1ZM5 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+                      </svg>
+                      <div class='txt '>승차권 예매</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-coin" viewBox="0 0 16 16">
+                        <path
+                          d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                      </svg>
+                      <div class='txt lightgray'>할인·정기권</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-suitcase" viewBox="0 0 16 16">
+                        <path
+                          d="M6 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 6 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 10 5Z" />
+                        <path
+                          d="M6.5 0a.5.5 0 0 0-.5.5V3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 1.031 1.75A1.003 1.003 0 0 0 5 16a1 1 0 0 0 1-1h4a1 1 0 1 0 1.969-.25A2 2 0 0 0 13 13V5a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-.5-.5h-3ZM9 3H7V1h2v2Zm3 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v8Z" />
+                      </svg>
+                      <div class='txt lightgray'>관관상품</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-ticket-perforated" viewBox="0 0 16 16">
+                        <path
+                          d="M4 4.85v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Z" />
+                        <path
+                          d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3h-13ZM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9V4.5Z" />
+                      </svg>
+                      <div class='txt lightgray'>승차권확인</div>
+                    </div>
+                  </div>
+                </div >
+            </div>
+          </div>
+          <!------------------------------ page 8 ------------------------------>
+          <div class='page' id='p8'>
+            <div class='page_wrap'>
+              <div class='top_bar'>
+                <div></div>
+                <div class='txt'>
+                  승차권 예매
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              </div>
+              <div class='scroller'>
+              <div class=''>
+                <div class='tab tab1'>
+                  <div class='left'>
+                    <div>출발</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                      <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>도착</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class='left'>
+                    <div>용산</div>
+                  </div>
+                  <div class='cntr'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </div>
+                  <div class='right'>
+                    <div>오송</div>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <div class=''>KTX역 선택 지도</div>
+                </div>
+                
+                  <div class='tab info_tab date_prev'>
+                    <div class='txt blue'>출발일</div>
+                    <div class='txt'>2023년 9월 19일 (화) 03:03</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up blue" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
+                    </svg>
+                  </div>
+                  <div class='date_top_btn_wrap'>
+                    <div class='date_top_btn'>달력에서 날짜 선택</div>
+                  </div>
+                  <div class='date_selc xScroller'>
+                    <div class='date_wrap'><div class='day'>화</div><div class='date'>19</div></div>
+                    <div class='date_wrap'><div class='day'>수</div><div class='date'>20</div></div>
+                    <div class='date_wrap'><div class='day'>목</div><div class='date'>21</div></div>
+                    <div class='date_wrap'><div class='day'>금</div><div class='date'>22</div></div>
+                    <div class='date_wrap sat'><div class='day'>토</div><div class='date'>23</div></div>
+                    <div class='date_wrap sun'><div class='day'>일</div><div class='date'>24</div></div>
+                    <div class='date_wrap'><div class='day'>월</div><div class='date'>25</div></div>
+                    <div class='date_wrap'><div class='day'>화</div><div class='date'>26</div></div>
+                    <div class='date_wrap'><div class='day'>수</div><div class='date'>27</div></div>
+                    <div class='date_wrap'><div class='day'>목</div><div class='date'>28</div></div>
+                    <div class='date_wrap'><div class='day'>금</div><div class='date'>29</div></div>
+                    <div class='date_wrap sat'><div class='day'>토</div><div class='date'>30</div></div>
+                  </div>
+                  <div class='time_selc xScroller'>
+                    <div class='hour_wrap'><div class='num'>00</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>01</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>02</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>03</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>04</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>05</div ><div class='hour'>시</div></div>
+                    <div class='hour_wrap'><div class='num'>06</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>07</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>08</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>09</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>10</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>11</div ><div class='hour'>시</div></div>
+                    <div class='hour_wrap'><div class='num'>12</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>13</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>14</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>15</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>16</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>17</div ><div class='hour'>시</div></div>
+                    <div class='hour_wrap'><div class='num'>18</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>19</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>20</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>21</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>22</div ><div class='hour'>시</div></div><div class='hour_wrap'><div class='num'>23</div ><div class='hour'>시</div></div>
+                  </div>
+                  <div class='tab info_tab'>
+                    <div class='txt blue'>승객 연령 및 좌석수</div>
+                    <div class='txt'>어른 1명</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                    </svg>
+                  </div>
+                  <div class='line_wrap'>
+                    <div class='line'></div>
+                  </div>
+                  <div class='tab info_tab'>
+                    <div class='txt blue'>상세 옵션</div>
+                    <div class='txt'>인접역 표출, SR 연게 표출</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-chevron-compact-down blue" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class='bottom_tab'>
+                  <div class='tab btn_tab'>
+                    <div class='left navy'>간편구매 등록</div>
+                    <div class='right navy'>열차 조회하기</div>
+                  </div>
+                  <div class='menu_tab'>
+                    <div class='icon_wrap blue'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class=" bi bi-train-freight-front" viewBox="0 0 16 16">
+                        <path
+                          d="M5.065.158A1.5 1.5 0 0 1 5.736 0h4.528a1.5 1.5 0 0 1 .67.158l3.237 1.618a1.5 1.5 0 0 1 .83 1.342V13.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V3.118a1.5 1.5 0 0 1 .828-1.342L5.065.158ZM2 9.372V13.5A1.5 1.5 0 0 0 3.5 15h4V8h-.853a.5.5 0 0 0-.144.021L2 9.372ZM8.5 15h4a1.5 1.5 0 0 0 1.5-1.5V9.372l-4.503-1.35A.5.5 0 0 0 9.353 8H8.5v7ZM14 8.328v-5.21a.5.5 0 0 0-.276-.447l-3.236-1.618A.5.5 0 0 0 10.264 1H5.736a.5.5 0 0 0-.223.053L2.277 2.67A.5.5 0 0 0 2 3.118v5.21l1-.3V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.028l1 .3Zm-2-.6V5H8.5v2h.853a1.5 1.5 0 0 1 .431.063L12 7.728ZM7.5 7V5H4v2.728l2.216-.665A1.5 1.5 0 0 1 6.646 7H7.5Zm-1-5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm-3 8a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1ZM5 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+                      </svg>
+                      <div class='txt '>승차권 예매</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-coin" viewBox="0 0 16 16">
+                        <path
+                          d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                      </svg>
+                      <div class='txt lightgray'>할인·정기권</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-suitcase" viewBox="0 0 16 16">
+                        <path
+                          d="M6 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 6 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 10 5Z" />
+                        <path
+                          d="M6.5 0a.5.5 0 0 0-.5.5V3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 1.031 1.75A1.003 1.003 0 0 0 5 16a1 1 0 0 0 1-1h4a1 1 0 1 0 1.969-.25A2 2 0 0 0 13 13V5a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-.5-.5h-3ZM9 3H7V1h2v2Zm3 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v8Z" />
+                      </svg>
+                      <div class='txt lightgray'>관관상품</div>
+                    </div>
+                    <div class='icon_wrap'>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="lightgray bi bi-ticket-perforated" viewBox="0 0 16 16">
+                        <path
+                          d="M4 4.85v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Z" />
+                        <path
+                          d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3h-13ZM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9V4.5Z" />
+                      </svg>
+                      <div class='txt lightgray'>승차권확인</div>
+                    </div>
+                  </div>
+                </div >
+              </div>
+            </div>
+          </div>
+          <!------------------------------ page 9 ------------------------------>
+          <div class='page' id='p9'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+          <!------------------------------ page 10 ------------------------------>
+          <div class='page' id='p10'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+          <!------------------------------ page 11 ------------------------------>
+          <div class='page' id='p11'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+          <!------------------------------ page 12 ------------------------------>
+          <div class='page' id='p12'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+          <!------------------------------ page 13 ------------------------------>
+          <div class='page' id='p13'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+          <!------------------------------ page 14 ------------------------------>
+          <div class='page' id='p14'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+          <!------------------------------ page 15 ------------------------------>
+          <div class='page' id='p15'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+          <!------------------------------ page 16 ------------------------------>
+          <div class='page' id='p16'>
+            <div class='page_wrap'>
+            </div>
+          </div>
+        </main>
+        <div class="ctrlbar" id="ctrlbar">
+          <div class="bottom_bar px-3 py-3">
+            <div class="text-x-large text-bold"></div>
+            <div id="help_btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                  d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+              </svg>
+            </div>
+            <div class="skip_btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+                <path
+                  d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z" />
+              </svg>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="../common/js/localstorage.js"> </script>
-    <script src="pg_info.js"> </script>
-    <script src="../common/js/pg_handler.js"> </script>
+  </div>
+  <script src="../common/js/localstorage.js"> </script>
+  <script src="pg_info.js"> </script>
+  <script src="../common/js/pg_handler.js"> </script>
 </body>
 
 </html>

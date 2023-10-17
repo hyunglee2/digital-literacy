@@ -1,10 +1,23 @@
-var total_page = 4;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
+var total_page = 16;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
 
 const instruction = [
     `
-    나는 부산에 살고 있습니다.<br>
-    다음 주 토요일에 서울에서 친구 결혼식이 있는 데, kTX를 타고 참석할 예정입니다.<br>
-    <div class='text-bold'>지도앱으로 우리집(BEXCO)에서 부산역까지 대중교통으로 최소환승해서 가는 방법을 찾아봅시다.</div>
+    코레일톡 어플리케이션을 활용하여 <div class='text-bold'>기차표를 예약하려고 합니다.</div>
+    아래 정보를 활용하여 예매해봅시다.
+    <div class='modal_info'>
+        <div class='info_head'>< 예매 시 필요정보 ><br></div>
+        <div class='info_body'>
+            ○ 출 발 역 : 부산역<br>
+            ○ 도 착 역 : 서울역<br>
+            ○ 출발일시 : 2023년 9월 23일(토) 10시 이후<br>
+            ○ 도착일시 : 2시 이전 도착 <br>
+            ○ 기차종류 : KTX 일반실<br>
+            ○ 승 객 수 : 성인 1명<br>
+            ○ 좌석선택 : 창측 정방향<br>
+            ○ 결제방법 : 간편결제 > 카카오페이<br>
+        </div>
+    </div>
+
      `
 ]
 
@@ -30,6 +43,24 @@ $(document).ready(function () {
 //     inputableAnswer: "12345678"
 // }
 const inputAnswer = [
+    {},
+    {},
+    {
+        page: 2,
+        inputableAnswer: "부산"
+    },
+    {},
+    {},
+    {
+        page: 5,
+        inputableAnswer: "서울"
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {},
