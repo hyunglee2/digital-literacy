@@ -6,7 +6,9 @@
 #p6,
 #p7,
 #p8,
-#p9 {
+#p9, 
+#p10,
+#p11 {
   width: 100%;
 }
 
@@ -18,12 +20,24 @@
   color: #006dc0;
 }
 
+.skyblue {
+  color: skyblue;
+}
+
 .gray {
   color: #6b6b6b;
 }
 
+.white {
+  color: white;
+}
+
 .lightgray {
   color: #c5c5c5;
+}
+
+.yellow {
+  color: #fdad00;
 }
 
 /* +++++++++++ instruction modal +++++++++++ */
@@ -198,7 +212,7 @@
 }
 
 #p1 .menu_tab .icon_wrap:nth-child(1) {
-  /* border-top: 8px solid #0c3c60; */
+  border-top: 8px solid #0c3c60;
 }
 
 #p1 .menu_tab .icon_wrap svg {
@@ -475,7 +489,7 @@ input {
 }
 
 #p4 .menu_tab .icon_wrap:nth-child(1) {
-  /* border-top: 8px solid #0c3c60; */
+  border-top: 8px solid #0c3c60;
 }
 
 #p4 .menu_tab .icon_wrap svg {
@@ -635,7 +649,7 @@ input {
 }
 
 #p7 .menu_tab .icon_wrap:nth-child(1) {
-  /* border-top: 8px solid #0c3c60; */
+  border-top: 8px solid #0c3c60;
 }
 
 #p7 .menu_tab .icon_wrap svg {
@@ -757,7 +771,7 @@ input {
   font-size: xx-large;
 }
 
-.bottom_tab {
+#p8 .bottom_tab {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -797,9 +811,9 @@ input {
   width: 30%;
 }
 
-#p8 .bottom_tab:nth-child(3) div {
+.bottom_tab:nth-child(3) div {
   width: 100%;
-  border: 1px solid #6b6b6b;
+  /* border: 1px solid #6b6b6b; */
   border-radius: 2rem;
   text-align: center;
   padding: 0.3em;
@@ -857,10 +871,11 @@ input {
 
 .bottom_tab .menu_tab {
   display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-  height: calc(var(--vh, 1vh)*13);
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5em;
+    padding-top: 0;
 }
 
 .bottom_tab .menu_tab .icon_wrap {
@@ -871,10 +886,6 @@ input {
   padding-top: 1em;
 }
 
-.bottom_tab .menu_tab .icon_wrap:nth-child(1) {
-  /* border-top: 8px solid #0c3c60; */
-}
-
 .bottom_tab .menu_tab .icon_wrap svg {
   width: 2em;
   height: 2em;
@@ -883,9 +894,359 @@ input {
 .bottom_tab .menu_tab .icon_wrap .txt {
   padding: 0.5em;
 }
+
+
+
+/* +++++++++++ p9 +++++++++++ */
+#p9 .scroller, #p10 .scroller {
+  height: calc(var(--vh, 1vh)*37);
+}
+
+.tb {
+  display: flex;
+    width: 100%;
+    height: calc(var(--vh, 1vh)*7);
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.btos {
+  background: #c7eef5;
+}
+
+.btos div{
+  font-size: xx-large;
+  color: #0c3c60;
+}
+
+.btos svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 1px;
+  stroke: #0c3c60;
+}
+
+.bottom_tab .btn_tab{
+  border-radius: unset !important;
+}
+
+.bottom_tab .btn_tab div{
+  border-radius: unset !important;
+}
+
+.bottom_tab .menu_tab div {
+  border : unset !important;
+}
+
+.menu_tab {
+  border : unset !important;
+}
+
+.prevDateNxt {
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prevDateNxt .blue {
+  border: 2px solid #006dc0;
+  padding: 0.5em;
+  border-radius: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.prevDateNxt .center {
+  font-size: x-large;
+}
+
+.selcBox3 {
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selcBox3 .selcbox {
+  background: white;
+  border: 1px solid #6b6b6b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  padding: 0.5em;
+  color: #6b6b6b;
+}
+
+.selcBox3 .selcbox svg {
+  width: 1em;
+  height: 1em;
+}
+
+.selcBox3 .left,.selcBox3 .center {
+  width : 35%; 
+}
+.selcBox3 .right {
+  width : 25%; 
+}
+
+.sm-tab{
+  display: flex;
+  align-items: center;
+  height: calc(var(--vh, 1vh)*3);
+}
+
+.sm-tab div {
+  width: 20%;
+  text-align: center;
+  color: #6b6b6b;
+  background: #ebebeb;
+}
+
+.reserv_btn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: unset !important;
+  height: calc(var(--vh, 1vh)*7);
+  width: 100% !important;
+    background: #d1e7f2;
+    font-weight: bold;
+    border: 1px solid #6b6b6b;
+}
+
+.reserv_btn div {
+  text-align: center;
+  font-size: xx-large;
+  padding: unset !important;
+}
+
+.tab_dark {
+  background: #475562;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tab_dark .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: calc(var(--vh, 1vh)*3);
+}
+.tab_dark .top .left {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: flex-start
+}
+.tab_dark .top .right {
+  color: #d5ba66;
+}
+.tab_dark .bottom {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  justify-content: space-around;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: calc(var(--vh, 1vh)*5);
+}
+.tab_dark .bottom div {
+  text-align: center;
+}
+
+.resrv_list_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.resrv_list_wrap .list_col {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  text-align: center;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.resrv_list_wrap .price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resrv_list_wrap .price .wrap{
+  border: 2px solid #0c3c60;
+  padding: 0.1em;
+  border-radius: 0.3rem;
+}
+
+.resrv_selced {
+  border: 4px solid #5097cf;
+  background: #f0f5fb;
+}
+
+.resrv_selced .price_selced .wrap {
+  background: #95bfdf;
+}
+
+.menu_tab .icon_wrap svg {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+/* +++++++++++ p11 +++++++++++ */
+#p11 .scroller {
+  height: calc(var(--vh, 1vh)*45);
+}
+
+#p11 .selcBox3 .left, .selcBox3 .center {
+  width: 100%;
+}
+
+#p11 .prevDateNxt {
+  height: calc(var(--vh, 10vh));
+}
+
+#p11 .prevDateNxt .center{
+  text-align: center;
+}
+
+.md-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(var(--vh, 1vh)*5);
+  background: #f5f5f5;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.md-tab .left, .md-tab .right {
+  display: flex;
+  align-items: center;
+}
+
+.md-tab .item_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.md-tab .item_wrap div {
+  padding-left: 0.3em;
+  padding-right: 1em;
+}
+
+.md-tab .item_wrap .reverse_txt {
+  padding-right: 0;
+}
+
+.seat_list_wrap {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+}
+.seat_list_wrap .list_col{
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.seat_list_wrap_reverse .seat {
+  padding: 1em;
+  border-radius: 1rem;
+  padding-bottom:0 ;
+}
+
+.seat_list_wrap_reverse .seat_num{
+  padding: 0.5em;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.seat_list_wrap .arrow {
+  width: 2em;
+  height: 2em;
+}
+
+.seat_list_wrap .list_col {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5em;
+}
+
+.reserved_seat .seat_num{
+  background: #e2e3e3;
+  border: 1px solid #6b6b6b;
+}
+.reserved_seat .seat {
+  background: #e2e3e3;
+  border: 1px solid #6b6b6b;
+}
+
+.seat_list_wrap_forward .seat {
+  padding: 1em;
+  border-radius: 1rem;
+  padding-top:0 ;
+}
+
+.seat_list_wrap_forward .seat_num{
+  padding: 0.5em;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.seat_list_wrap_forward .reserved_seat .seat_num{
+  background: #e2e3e3;
+  border: 1px solid #6b6b6b;
+}
+.seat_list_wrap_forward .reserved_seat .seat {
+  background: #e2e3e3;
+  border: 1px solid #6b6b6b;
+}
+
+.seat_list_wrap_forward .available_seat .seat_num{
+  background: white;
+  border: 1px solid black;
+}
+.seat_list_wrap_forward .available_seat .seat {
+  background: white;
+  border: 1px solid black;
+}
+
+.seat_list_wrap_reverse .available_seat .seat_num{
+  background: white;
+  border: 1px solid black;
+}
+.seat_list_wrap_reverse .available_seat .seat {
+  background: #e1ebf4;
+  border: 1px solid black;
+}
+
 /* ++++++++++++ 모바일 사이즈 미디어쿼리 ++++++++++++++++ */
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+  #p1 .menu_tab .icon_wrap svg {
+    width: 1.5em;
+    height: 1.5em;
+}
+.menu_tab .icon_wrap svg {
+  width: 1.5em ;
+  height: 1.5em;
+}
+.menu_tab .icon_wrap .txt {
+  font-size: small;
+}
+}
 
 /* ++++++++++++ 태블릿 사이즈 미디어쿼리 ++++++++++++++++ */
 @media (min-width: 768px) and (max-width: 1024px) {

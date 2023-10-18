@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(page_num);
     });
 
-    //다음 버튼 : 클릭 시 페이지 이동, 해당 페이지오디오만 재생(배열 인덱스라 페이지 넘버-1) 
+    
     $(document).on("click", "#help_btn", function () {
         $('#modalForInit').modal('show');
         $('.modal-body').html(instruction);
