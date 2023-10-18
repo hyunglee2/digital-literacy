@@ -86,6 +86,6 @@ idSubmitBtn.addEventListener("click", function () {
     } else {
         localStorage["user_now"] = inputName;
         localStorage[inputName] = user_data;
-        location.href = "./main/main.html";
+        location.href = "./survey/survey.html";
     }
 })
