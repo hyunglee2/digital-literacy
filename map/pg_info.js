@@ -1,4 +1,4 @@
-var total_page = 4;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
+var total_page = 5;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
 
 const instruction = [
     `
@@ -16,12 +16,12 @@ const tryAginMsg = [
 
 // 페이지 로드 후 0.5초 후 모달로 지시문 띄우기
 $(document).ready(function () {
-    $( document ).ready(function() {
+    $(document).ready(function () {
         setTimeout(function () {
             $('#modalForInit').modal('show');
             $('.modal-body').html(instruction);
         }, 500);
-      });  
+    });
 });
 
 //index는 0부터 시작하므로 total_page+1개만큼 {} 작성
@@ -33,6 +33,10 @@ const inputAnswer = [
     {},
     {},
     {},
+    {
+        page: 3,
+        inputableAnswer: "부산역"
+    },
     {},
     {}
 ];
