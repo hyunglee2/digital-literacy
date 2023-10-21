@@ -211,6 +211,11 @@ svg {
 }
 
 /* +++++++++++ 폰트 색, 크기 등 +++++++++++ */
+.text-xxx-large {
+  font-size: xxx-large;
+  font-weight: bold;
+}
+
 .text-xx-large {
   font-size: xx-large;
   font-weight: bold;
@@ -419,6 +424,10 @@ svg {
     font-size: xx-large;
   }
 
+  .tab_txt_lg {
+    font-size: xx-large;
+  }
+
 }
 
 /* ++++++++++++ 모바일 사이즈 미디어쿼리 ++++++++++++++++ */
@@ -428,6 +437,10 @@ svg {
     min-width: 375px;
     max-width: 480px;
     width: 100%;
+  }
+
+  .text-xxx-large {
+    font-size: x-large;
   }
 
 }
