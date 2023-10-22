@@ -2,7 +2,7 @@ var total_page = 16;//페이지 수 -> 시나리오마다 total_page 수 바꾸�
 
 const instruction = [
     `
-    코레일톡 어플리케이션을 활용하여 <div class='text-bold'>기차표를 예약하려고 합니다.</div>
+    코레일톡 어플리케이션을 활용하여 <span class='text-bold'>기차표를 예약하려고 합니다.</span>
     아래 정보를 활용하여 예매해봅시다.
     <div class='modal_info'>
         <div class='info_head'>< 예매 시 필요정보 ><br></div>
