@@ -1,0 +1,375 @@
+#p1,
+#p2,
+#p3,
+#p4,
+#p5,
+#p6,
+#p7,
+#p8,
+#p9,
+#p10,
+#p11,
+#p12,
+#p13,
+#p14,
+#p15,
+#p16 {
+  width: 100%;
+}
+
+.gray {
+  color: #6b6b6b;
+}
+
+.gray_bg {
+  background: #f6f6f6;
+}
+
+.white {
+  color: white;
+}
+
+.lightgray {
+  color: #c5c5c5;
+}
+
+.lightgray_bg {
+  background: #f9f9f9 !important;
+}
+
+.yellow {
+  color: #ffbc0d;
+}
+
+.yellow_bg {
+  background: #ffbc0d;
+}
+
+.darkyellow {
+  color: #d87e00;
+}
+
+.darkyellow_bg {
+  background: #d87e00;
+}
+
+.red {
+  color: #db0007;
+}
+
+.red_bg {
+  background: #db0007;
+}
+
+.darkgreen {
+  color: #264a36;
+}
+
+.text-large {
+  font-size: large;
+}
+
+
+
+/* +++++++++++ p1 +++++++++++ */
+.kiosk_cover {
+  height: calc(var(--vh, 1vh)*54);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.cover .blank {
+  height: calc(var(--vh, 1vh)*2);
+  background: white !important;
+}
+
+.cover .bottom_btns {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: calc(var(--vh, 1vh)*37);
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.cover .bottom_btns .left {
+  padding: 1em;
+  height: calc(var(--vh, 1vh)*37);
+  justify-content: flex-start;
+}
+
+.cover .bottom_btns .left .bi-qr-code {
+  width: 4em;
+  height: 4em;
+}
+
+.cover .bottom_btns .right {
+  padding: 1em;
+  padding-top: 0;
+  padding-right: 0;
+  height: calc(var(--vh, 1vh)*37);
+  justify-content: flex-start;
+}
+
+.cover .bottom_btns .order_btn {
+  padding: 0.8em;
+  border: 1px solid #6b6b6b;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.cover .bottom_btns .sm_btn {
+  padding: 0.8em;
+  border: 1px solid #6b6b6b;
+  text-align: center;
+  width: 50%;
+  border-radius: 0.5rem;
+}
+
+.cover .bottom_btns .sm_btn div {
+  font-size: large;
+}
+
+/* +++++++++++ p2 +++++++++++ */
+.btm_sm .bottom_btns_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: calc(var(--vh, 1vh)*72);
+  justify-content: space-between;
+}
+
+.place .btns_wrap {
+  width: 80%;
+}
+
+.place .btns_wrap .left,
+.place .btns_wrap .right {
+  border: 1px solid #6b6b6b;
+  text-align: center;
+  width: 50%;
+  border-radius: 0.5rem;
+  padding: 1em;
+}
+
+.place img {
+  border: 1px solid #6b6b6b;
+  background: #c5c5c5;
+  height: 8em;
+}
+
+.btm_sm .bottom_btns {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: calc(var(--vh, 1vh)*15);
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.btm_sm .bottom_btns .left {
+  width: 40%;
+  padding: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  height: calc(var(--vh, 1vh)*15);
+  justify-content: flex-start;
+}
+
+.btm_sm .bottom_btns .left .bi-qr-code {
+  width: 3em;
+  height: 3em;
+}
+
+.btm_sm .bottom_btns .left .bi-chevron-down {
+  width: 2em;
+  height: 2em;
+  stroke: black;
+  stroke-width: 0.1px;
+}
+
+.btm_sm .bottom_btns .right {
+  width: 60%;
+  padding: 0.5em;
+  padding-right: 0;
+  height: calc(var(--vh, 1vh)*15);
+  justify-content: center;
+}
+
+.btm_sm .bottom_btns .sm_btn {
+  padding: 0.1em;
+  border: 1px solid #6b6b6b;
+  text-align: center;
+  width: 50%;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.place .lng_btns_wrap {
+  width: 90%;
+
+}
+
+.place .lng_btn {
+  padding: 0.5em;
+  border: 1px solid #6b6b6b;
+  text-align: center;
+  width: 50%;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* +++++++++++ p3 +++++++++++ */
+#p3 .scroller {
+  height: calc(var(--vh, 1vh)*76);
+}
+
+.side_menu_left {
+  width: 28%;
+  height: calc(var(--vh, 1vh)*76);
+}
+
+.side_menu_right {
+  width: 72%;
+  height: calc(var(--vh, 1vh)*76);
+}
+
+.side_menu_left .logo_btn {
+  width: 100%;
+  border: 2px solid #d7d7d7;
+  background: white;
+  text-align: center;
+  border-radius: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.side_menu_left .menu_btn_wrap {
+  width: 100%;
+  padding: 0.5em;
+  padding-left: 0.8em;
+  border: 2px solid #d7d7d7;
+  background: white;
+  text-align: center;
+  border-radius: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.side_menu_left img {
+  border: 1px solid #d7d7d7;
+  background: #c5c5c5;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.side_menu_left .home {
+  border-bottom: 5px solid #ffbc0d;
+}
+
+.side_menu_right .btn_row_wrap {
+  width: 100%;
+}
+
+/* .side_menu_right .btn_row_wrap .left, .side_menu_right .btn_row_wrap .right {
+  width: 50%;
+} */
+
+.side_menu_right .squareBtn {
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #d7d7d7;
+  background: white;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: calc(var(--vh, 1vh)*13);
+}
+
+.side_menu_right .squareBtnImg {
+  border: 1px solid #6b6b6b;
+  background: #c5c5c5;
+  height: 2em;
+  width: 2em;
+}
+
+.side_menu_right .bannerImg {
+  border: 1px solid #6b6b6b;
+  background: #c5c5c5;
+  height: 2em;
+  width: 100%;
+  height: calc(var(--vh, 1vh)*13);
+}
+
+.side_menu_right .thumbBtn {
+  padding: 0.5em;
+  border: 2px solid #d7d7d7;
+  background: white;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.btn_row_wrap3 .thumbBtn img{
+  border: 1px solid #6b6b6b;
+  background: #c5c5c5;
+  width: 4em;
+  height: 4em;
+
+}
+
+.btn_row_wrap3 .w-33 {
+  height: 100%;
+}
+
+.bottom_btns .gotoPayBtn {
+  background: #ffbc0d;
+  padding: 0.1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 0.5rem;
+}
+
+.bottom_btns .price_wrap {
+  width: 30%;
+}
+
+.bottom_btns .price_wrap .red_badge {
+  border-radius: 2rem;
+  width: 1.5em;
+  height: 1.5em;
+  background: #db0007;
+  color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+
+/* ++++++++++++ 모바일 사이즈 미디어쿼리 ++++++++++++++++ */
+
+@media (max-width: 767px) {
+  .cover .bottom_btns .left .bi-qr-code {
+    width: 3em;
+    height: 3em;
+  }
+
+}
+
+/* ++++++++++++ 태블릿 사이즈 미디어쿼리 ++++++++++++++++ */
+@media (min-width: 768px) and (max-width: 1024px) {}
