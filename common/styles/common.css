@@ -109,6 +109,11 @@ svg {
   pointer-events: none;
 }
 
+.svg-1em {
+  width: 1em !important;
+  height: 1em !important;
+}
+
 .svg-2em {
   width: 2em !important;
   height: 2em !important;
@@ -310,6 +315,12 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.flex-alCntr-juAr {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* +++++++++++ 스크롤러 +++++++++++ */

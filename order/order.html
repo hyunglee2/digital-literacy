@@ -2,389 +2,747 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Digital Literacy</title>
-  <meta name="viewport"
-    content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <link href="../common/styles/font.css" rel="stylesheet" />
-  <link href="../common/styles/common.css" rel="stylesheet" />
-  <link href="./styles/layout.css" rel="stylesheet" />
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Digital Literacy</title>
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link href="../common/styles/font.css" rel="stylesheet" />
+    <link href="../common/styles/common.css" rel="stylesheet" />
+    <link href="./styles/layout.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
-  <div id="bg_phone">
-    <div id="view_wrap">
-      <div id="view">
-        <main class="main main-93" , id="main" , role="main">
-          <!-- Modal : instruction -->
-          <div class="modal fade" id="modalForInit">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header border-0">
-                </div>
-                <div class="modal-body">
-                  모달 내용
-                </div>
-                <div class="modal-footer border-0 ">
-                  <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">확인</button>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div id="bg_phone">
+        <div id="view_wrap">
+            <div id="view">
+                <main class="main main-93" , id="main" , role="main">
+                    <!-- Modal : instruction -->
+                    <div class="modal fade" id="modalForInit">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                </div>
+                                <div class="modal-body">
+                                    모달 내용
+                                </div>
+                                <div class="modal-footer border-0 ">
+                                    <button type="button" class="btn btn-secondary btn-lg"
+                                        data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-          <!-- Modal -->
-          <div class="modal fade" id="staticBackdrop">
-            <div class="modal-dialog modal-sm modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header border-0">
-                </div>
-                <div class="modal-body">
-                  모달 내용
-                </div>
-                <div class="modal-footer border-0 ">
-                  <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">확인</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!------------------------------ page 1 ------------------------------>
-          <div class='page' id='p1'>
-            <div class='page_wrap cover'>
-                <div class='kiosk_cover'>
-                    <img src="./images/kiosk_cover.jpg">
-                </div>
-                <div class='blank'>&nbsp;</div>
-                <div class='bottom_btns'>
-                  <div class='left yellow_bg flex-alCntr-juCntr-col'>
-                    <div class='text-xx-large text-bold txt-cntr'>포인트를 적립하세요</div>
-                    <div class='text-large pb-4'>결제 전 선택 필수</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
-                      <path d="M2 2h2v2H2V2Z" />
-                      <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
-                      <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
-                      <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z" />
-                      <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z" />
-                    </svg>
-                    <div class='pb-2'></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="sve-1em bi bi-chevron-down" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                  </div>
-      
-                  <div class='right flex-alCntr-juCntr-col w-100'>
-                    <div class='order_btn w-100 mb-3 floating-shdw pg_1_answer'>
-                      <div class='text-xx-large pg_1_answer'>주문하기</div>
-                      <div class='text-large pg_1_answer'>(Strat Order)</div>
-                    </div>
-                    <div class='sm_btns_wrap flex-alCntr-juBtw mb-3 w-100'>
-                      <div class='sm_btn d-flex me-3 floating-shdw'>
-                        <div class='text-large'>언어선택<br>(Languages)</div>
-                      </div>
-                      <div class='sm_btn d-flex floating-shdw'>
-                        <div class='text-large'>도움 기능<br>(Accessibility)</div>
-                      </div>
-                    </div>
-                    <div class='text-large pb-2'>일반적인 영양 권장량은 일일 2000칼로리이지만 필요한 칼로리는 다를 수 있습니다. 요청시 추가 영양정보를 제공해드립니다</div>
-                  </div>
-                </div>
-      
-      
-                <div class=''></div>
-                <div class=''></div>
-                <div class=''></div>
-      
-              </div>
-          </div>
-          <!------------------------------ page 2 ------------------------------>
-          <div class='page' id='p2'>
-            <div class='page_wrap place btm_sm'>
-                <div class='bottom_btns_top'>
-                  <div class='text-bold text-xx-large flex-alCntr-juCntr yellow m-4'>W</div>
-                  <div class='text-bold text-xxx-large flex-alCntr-juCntr mb-4'>
-                    식사 장소를<br></br>선택해주세요
-                  </div>
-                  <div class='btns_wrap flex-alCntr-juBtw mb-4'>
-                    <div class='left flex-alCntr-juCntr-col me-4 floating-shdw'>
-                      <div class='text-xx-large'>매장</div>
-                      <img src='' />
-                    </div>
-                    <div class='right flex-alCntr-juCntr-col floating-shdw'>
-                      <div class='text-xx-large'>포장</div>
-                      <img src='' />
-                    </div>
-                  </div>
-                  <div class='lng_selc flex-alCntr-juCntr '>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate svg-1em me-3" viewBox="0 0 16 16">
-                      <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
-                      <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
-                    </svg>
-                    <div>언어 선택</div>
-                  </div>
-                  <div class='lng_btns_wrap flex-alCntr-juBtw'>
-                    <div class='lng_btn d-flex me-3'>
-                      <div class='text-x-large'>English</div>
-                    </div>
-                    <div class='lng_btn d-flex'>
-                      <div class='text-x-large'>한국어</div>
-                    </div>
-                  </div>
-                </div>
-                <div class='bottom_btns'>
-                  <div class='left yellow_bg flex-alCntr-juCntr-col'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
-                      <path d="M2 2h2v2H2V2Z" />
-                      <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
-                      <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
-                      <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z" />
-                      <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z" />
-                    </svg>
-                    <div class='text-medium txt-cntr py-2'>포인트를 적립하세요<br></br>결제 전 선택 필수</div>
-                    <div class=''></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="sve-1em bi bi-chevron-down" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                  </div>
-                  <div class='right flex-alCntr-juCntr-col w-100'>
-                    <div class='sm_btns_wrap flex-alCntr-juBtw mb-3 w-100'>
-                      <div class='sm_btn d-flex me-3'>
-                        <div class='text-x-large'>처음으로</div>
-                      </div>
-                      <div class='sm_btn d-flex'>
-                        <div class='text-x-large'>도움기능</div>
-                      </div>
-                    </div>
-                    <div class='text-medium'>일반적인 영양 권장량은 일일 2000칼로리이지만 필요한 칼로리는 다를 수 있습니다. 요청시 추가 영양정보를 제공해드립니다</div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <!------------------------------ page 3 ------------------------------>
-          <div class='page' id='p3'>
-            <div class='page_wrap order btm_sm '>
-                <div class='side_menu flex-alCntr-juCntr '>
-                  <div class='side_menu_left'>
-                    <div class='logo_btn'>
-                      <div class='text-bold text-xxx-large flex-alCntr-juCntr yellow m-4'>W</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill svg-15em yellow" viewBox="0 0 16 16">
-                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
-                      </svg>
-                      <div class='txt ms-2 home'>홈</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill svg-15em yellow" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                      </svg>
-                      <div class='txt ms-2'>추천메뉴</div>
-                    </div>
-                    <div class='blank'></div>
-                    <div class='menu_btn_wrap'>
-                      <img src />
-                      <div class='txt ms-2'>버거</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <img src />
-                      <div class='txt ms-2'>스낵</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <img src />
-                      <div class='txt ms-2'>사이드</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <img src />
-                      <div class='txt ms-2'>커피</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <img src />
-                      <div class='txt ms-2'>디저트</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <img src />
-                      <div class='txt ms-2'>음료</div>
-                    </div>
-                    <div class='menu_btn_wrap'>
-                      <img src />
-                      <div class='txt ms-2'>해피밀</div>
-                    </div>
-      
-                  </div>
-                  <div class='side_menu_right scroller flex-alFS-juFS-col p-3'>
-                    <div class='text-xx-large text-bold mb-4'>메뉴 알아보기</div>
-                    <div class='btn_row_wrap flex-alCntr-juBtw'>
-                      <div class='pe-2 flex-alCntr-juBtw w-50'>
-                        <div class='left squareBtn'>
-                          <div class='txt pe-2'>추천메뉴</div>
-                          <img class='squareBtnImg' src />
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop">
+                        <div class="modal-dialog modal-sm modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                </div>
+                                <div class="modal-body">
+                                    모달 내용
+                                </div>
+                                <div class="modal-footer border-0 ">
+                                    <button type="button" class="btn btn-secondary btn-lg"
+                                        data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class='ps-2 flex-alCntr-juBtw w-50'>
-                        <div class='right squareBtn'>
-                          <div class='txt pe-2'>버거&디저트</div>
-                          <img class='squareBtnImg' src />
-                        </div>
-                      </div>
                     </div>
-                    <div class='btn_row_wrap flex-alCntr-juBtw mt-3'>
-                      <div class='pe-2 flex-alCntr-juBtw w-50'>
-                        <div class='left squareBtn'>
-                          <div class='txt pe-2'>이달의 스낵</div>
-                          <img class='squareBtnImg' src />
-                        </div>
-                      </div>
-                      <div class='ps-2 flex-alCntr-juBtw w-50'>
-                        <div class='right squareBtn'>
-                          <div class='txt pe-2'>커피&디저트</div>
-                          <img class='squareBtnImg' src />
-                        </div>
-                      </div>
-                    </div>
-                    <div class='btn_sol_wrap flex-alCntr-juBtw mt-3 w-100'>
-                      <img class='bannerImg squareBtn w-100' src />
-                    </div>
-                    <div class='btn_sol_wrap flex-alCntr-juBtw mt-3 w-100'>
-                      <img class='bannerImg squareBtn w-100' src />
-                    </div>
-                    <div class='btn_sol_wrap flex-alCntr-juBtw mt-3 w-100'>
-                      <img class='bannerImg squareBtn w-100' src />
-                    </div>
-                    <div class='text-xx-large text-bold mt-4'>인기 메뉴</div>
-                    <div class='btn_row_wrap3 flex-alCntr-juBtw mt-3 w-100'>
-                      <div class='pe-2 w-33'>
-                        <div class='thumbBtn w-100'>
-                          <img class='thumbBtnImg img_fill_unset' src="./images/burger_sample.png" />
-                          <div class='txt pe-2'>빅맥</div>
-                        </div>
-                      </div>
-                      <div class='pe-2 w-33'>
-                        <div class='thumbBtn w-100'>
-                          <img class='thumbBtnImg img_fill_unset' src="./images/burger_sample.png" />
-                          <div class='txt pe-2'>맥스파이시 상하이 버거</div>
-                        </div>
-                      </div>
-                      <div class='pe-2 w-33'>
-                        <div class='thumbBtn w-100'>
-                          <img class='thumbBtnImg img_fill_unset' src="./images/burger_sample.png" />
-                          <div class='txt pe-2'>쿼터파운더 치즈 버거</div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class='bottom_btns w-100'>
-                  <div class='left yellow_bg flex-alCntr-juCntr-col'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
-                      <path d="M2 2h2v2H2V2Z" />
-                      <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
-                      <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
-                      <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z" />
-                      <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z" />
-                    </svg>
-                    <div class='text-medium txt-cntr py-2'>포인트를 적립하세요<br></br>결제 전 선택 필수</div>
-                    <div class=''></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="sve-1em bi bi-chevron-down" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                  </div>
-                  <div class='right flex-alCntr-juCntr-col w-100'>
-                    <div class='sm_btns_wrap flex-alFS-juFS-col mb-2 w-100'>
-                      <div class='w-100 flex-alCntr-juBtw mb-2'>
-                        <div class='price_wrap'>
-                          <!-- <div class='red_badge'>1</div> -->
-                          <div class='price text-xx-large w-100'>₩0</div>
-                        </div>
-                        <div class='gotoPayBtn'>주문내역 확인 후 결제하기</div>
-                      </div>
-                      <div class='w-100 flex-alCntr-juBtw'>
-                        <div class='sm_btn d-flex me-3'>
-                          <div class='text-x-large'>처음으로</div>
-                        </div>
-                        <div class='sm_btn d-flex'>
-                          <div class='text-x-large'>도움기능</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <!------------------------------ page 4 ------------------------------>
-          <div class='page' id='p4'>
-            <div class='page_wrap'>
+                    <!------------------------------ page 1 ------------------------------>
+                    <div class='page' id='p1'>
+                        <div class='page_wrap cover'>
+                            <div class='kiosk_cover'>
+                                <img src="./images/kiosk_cover.jpg">
+                            </div>
+                            <div class='blank'>&nbsp;</div>
+                            <div class='bottom_btns'>
+                                <div class='left yellow_bg flex-alCntr-juCntr-col'>
+                                    <div class='text-xx-large text-bold txt-cntr'>포인트를 적립하세요</div>
+                                    <div class='text-large pb-4'>결제 전 선택 필수</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-qr-code" viewBox="0 0 16 16">
+                                        <path d="M2 2h2v2H2V2Z" />
+                                        <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
+                                        <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
+                                        <path
+                                            d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z" />
+                                        <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z" />
+                                    </svg>
+                                    <div class='pb-2'></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="sve-1em bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
 
-            </div>
-          </div>
-          <!------------------------------ page 5 ------------------------------>
-          <div class='page' id='p5'>
-            <div class='page_wrap'>
+                                <div class='right flex-alCntr-juCntr-col w-100'>
+                                    <div class='order_btn w-100 mb-3 floating-shdw pg_1_answer'>
+                                        <div class='text-xx-large pg_1_answer'>주문하기</div>
+                                        <div class='text-large pg_1_answer'>(Strat Order)</div>
+                                    </div>
+                                    <div class='sm_btns_wrap flex-alCntr-juBtw mb-3 w-100'>
+                                        <div class='sm_btn d-flex me-3 floating-shdw'>
+                                            <div class='text-large'>언어선택<br>(Languages)</div>
+                                        </div>
+                                        <div class='sm_btn d-flex floating-shdw'>
+                                            <div class='text-large'>도움 기능<br>(Accessibility)</div>
+                                        </div>
+                                    </div>
+                                    <div class='text-large pb-2'>일반적인 영양 권장량은 일일 2000칼로리이지만 필요한 칼로리는 다를 수 있습니다. 요청시 추가
+                                        영양정보를 제공해드립니다</div>
+                                </div>
+                            </div>
 
-            </div>
-          </div>
-          <!------------------------------ page 6 ------------------------------>
-          <div class='page' id='p6'>
-            <div class='page_wrap'>
 
-            </div>
-          </div>
-          <!------------------------------ page 7 ------------------------------>
-          <div class='page' id='p7'>
-            <div class='page_wrap'>
+                            <div class=''></div>
+                            <div class=''></div>
+                            <div class=''></div>
 
-            </div>
-          </div>
-          <!------------------------------ page 8 ------------------------------>
-          <div class='page' id='p8'>
-            <div class='page_wrap'>
+                        </div>
+                    </div>
+                    <!------------------------------ page 2 ------------------------------>
+                    <div class='page' id='p2'>
+                        <div class='page_wrap place btm_sm'>
+                            <div class='bottom_btns_top'>
+                                <div class='text-bold text-xx-large flex-alCntr-juCntr yellow m-4'>W</div>
+                                <div class='text-bold text-xxx-large flex-alCntr-juCntr mb-4 txt-cntr'>
+                                    식사 장소를<br>선택해주세요
+                                </div>
+                                <div class='btns_wrap flex-alCntr-juBtw mb-4'>
+                                    <div class='left flex-alCntr-juCntr-col me-4 floating-shdw'>
+                                        <div class='text-xx-large'>매장</div>
+                                        <img src='' />
+                                    </div>
+                                    <div class='right flex-alCntr-juCntr-col floating-shdw pg_2_answer'>
+                                        <div class='text-xx-large pg_2_answer'>포장</div>
+                                        <img class='pg_2_answer' src='' />
+                                    </div>
+                                </div>
+                                <div class='lng_selc flex-alCntr-juCntr '>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-translate svg-1em me-3" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                                        <path
+                                            d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+                                    </svg>
+                                    <div>언어 선택</div>
+                                </div>
+                                <div class='lng_btns_wrap flex-alCntr-juBtw'>
+                                    <div class='lng_btn d-flex me-3'>
+                                        <div class='text-x-large'>English</div>
+                                    </div>
+                                    <div class='lng_btn d-flex'>
+                                        <div class='text-x-large'>한국어</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='bottom_btns'>
+                                <div class='left yellow_bg flex-alCntr-juCntr-col'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-qr-code" viewBox="0 0 16 16">
+                                        <path d="M2 2h2v2H2V2Z" />
+                                        <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
+                                        <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
+                                        <path
+                                            d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z" />
+                                        <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z" />
+                                    </svg>
+                                    <div class='text-medium txt-cntr py-2'>포인트를 적립하세요<br></br>결제 전 선택 필수</div>
+                                    <div class=''></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="sve-1em bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                                <div class='right flex-alCntr-juCntr-col w-100'>
+                                    <div class='sm_btns_wrap flex-alCntr-juBtw mb-3 w-100'>
+                                        <div class='sm_btn d-flex me-3'>
+                                            <div class='text-x-large'>처음으로</div>
+                                        </div>
+                                        <div class='sm_btn d-flex'>
+                                            <div class='text-x-large'>도움기능</div>
+                                        </div>
+                                    </div>
+                                    <div class='text-medium'>일반적인 영양 권장량은 일일 2000칼로리이지만 필요한 칼로리는 다를 수 있습니다. 요청시 추가 영양정보를
+                                        제공해드립니다</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 3 ------------------------------>
+                    <div class='page' id='p3'>
+                        <div class='page_wrap order btm_sm '>
+                            <div class='side_menu flex-alCntr-juCntr '>
+                                <div class='side_menu_left'>
+                                    <div class='logo_btn'>
+                                        <div class='text-bold text-xxx-large flex-alCntr-juCntr yellow m-4'>W</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-house-door-fill svg-15em yellow"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                        </svg>
+                                        <div class='txt ms-2 home'>홈</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill svg-15em yellow"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                                        <div class='txt ms-2'>추천메뉴</div>
+                                    </div>
+                                    <div class='blank'></div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>버거</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>스낵</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>사이드</div>
+                                    </div>
+                                    <div class='menu_btn_wrap pg_3_answer'>
+                                        <img class='pg_3_answer' src />
+                                        <div class='txt ms-2 pg_3_answer'>커피</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>디저트</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>음료</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>해피밀</div>
+                                    </div>
+                                </div>
+                                <div class='side_menu_right scroller flex-alFS-juFS-col p-3'>
+                                    <div class='text-xx-large text-bold mb-4'>메뉴 알아보기</div>
+                                    <div class='btn_row_wrap flex-alCntr-juBtw'>
+                                        <div class='pe-2 flex-alCntr-juBtw w-50'>
+                                            <div class='left squareBtn'>
+                                                <div class='txt pe-2'>추천메뉴</div>
+                                                <img class='squareBtnImg' src />
+                                            </div>
+                                        </div>
+                                        <div class='ps-2 flex-alCntr-juBtw w-50'>
+                                            <div class='right squareBtn'>
+                                                <div class='txt pe-2'>버거&디저트</div>
+                                                <img class='squareBtnImg' src />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='btn_row_wrap flex-alCntr-juBtw mt-3'>
+                                        <div class='pe-2 flex-alCntr-juBtw w-50'>
+                                            <div class='left squareBtn'>
+                                                <div class='txt pe-2'>이달의 스낵</div>
+                                                <img class='squareBtnImg' src />
+                                            </div>
+                                        </div>
+                                        <div class='ps-2 flex-alCntr-juBtw w-50'>
+                                            <div class='right squareBtn'>
+                                                <div class='txt pe-2'>커피&디저트</div>
+                                                <img class='squareBtnImg' src />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='btn_sol_wrap flex-alCntr-juBtw mt-3 w-100'>
+                                        <img class='bannerImg squareBtn w-100' src />
+                                    </div>
+                                    <div class='btn_sol_wrap flex-alCntr-juBtw mt-3 w-100'>
+                                        <img class='bannerImg squareBtn w-100' src />
+                                    </div>
+                                    <div class='btn_sol_wrap flex-alCntr-juBtw mt-3 w-100'>
+                                        <img class='bannerImg squareBtn w-100' src />
+                                    </div>
+                                    <div class='text-xx-large text-bold mt-4'>인기 메뉴</div>
+                                    <div class='btn_row_wrap3 flex-alCntr-juBtw mt-3 w-100'>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg img_fill_unset'
+                                                    src="./images/burger_sample.png" />
+                                                <div class='txt pe-2'>빅맥</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg img_fill_unset'
+                                                    src="./images/burger_sample.png" />
+                                                <div class='txt pe-2'>맥스파이시 상하이 버거</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg img_fill_unset'
+                                                    src="./images/burger_sample.png" />
+                                                <div class='txt pe-2'>쿼터파운더 치즈 버거</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='bottom_btns w-100'>
+                                <div class='left yellow_bg flex-alCntr-juCntr-col'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-qr-code" viewBox="0 0 16 16">
+                                        <path d="M2 2h2v2H2V2Z" />
+                                        <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
+                                        <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
+                                        <path
+                                            d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z" />
+                                        <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z" />
+                                    </svg>
+                                    <div class='text-medium txt-cntr py-2'>포인트를 적립하세요<br></br>결제 전 선택 필수</div>
+                                    <div class=''></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="sve-1em bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                                <div class='right flex-alCntr-juCntr-col w-100'>
+                                    <div class='sm_btns_wrap flex-alFS-juFS-col mb-2 w-100'>
+                                        <div class='w-100 flex-alCntr-juBtw mb-2'>
+                                            <div class='price_wrap'>
+                                                <!-- <div class='red_badge'>1</div> -->
+                                                <div class='price text-xx-large w-100'>₩0</div>
+                                            </div>
+                                            <div class='gotoPayBtn'>주문내역 확인 후 결제하기</div>
+                                        </div>
+                                        <div class='w-100 flex-alCntr-juBtw'>
+                                            <div class='sm_btn d-flex me-3'>
+                                                <div class='text-x-large'>처음으로</div>
+                                            </div>
+                                            <div class='sm_btn d-flex'>
+                                                <div class='text-x-large'>도움기능</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 4 ------------------------------>
+                    <div class='page' id='p4'>
+                        <div class='page_wrap order btm_sm '>
+                            <div class='side_menu flex-alCntr-juCntr '>
+                                <div class='side_menu_left'>
+                                    <div class='logo_btn'>
+                                        <div class='text-bold text-xxx-large flex-alCntr-juCntr yellow m-4'>W</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-house-door-fill svg-15em yellow"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                        </svg>
+                                        <div class='txt ms-2'>홈</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill svg-15em yellow"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                                        <div class='txt ms-2'>추천메뉴</div>
+                                    </div>
+                                    <div class='blank'></div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>버거</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>스낵</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>사이드</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2 home'>커피</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>디저트</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>음료</div>
+                                    </div>
+                                    <div class='menu_btn_wrap'>
+                                        <img src />
+                                        <div class='txt ms-2'>해피밀</div>
+                                    </div>
 
-            </div>
-          </div>
-          <!------------------------------ page 9 ------------------------------>
-          <div class='page' id='p9'>
-            <div class='page_wrap'>
+                                </div>
+                                <div class='side_menu_right scroller flex-alFS-juFS-col p-3'>
+                                    <div class='text-xx-large text-bold mb-4'>커피</div>
+                                    <div class='mb-4'>아래에서 세부메뉴를 확인하세요</div>
+                                    <div class='triple_btn_row_wrap flex-alCntr-juCntr w-100 mb-4'>
+                                        <div class='btnn me-2 darkgray_bg floating-shdw'>전체</div>
+                                        <div class='btnn me-2'>아이스크림</div>
+                                        <div class='btnn'>맥카페커피</div>
+                                    </div>
+                                    <div class='btn_row_wrap3 flex-alCntr-juBtw mt-3 w-100'>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>아이스크림 라떼</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>바닐라 라떼</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>아이스 아메리카노</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='btn_row_wrap3 flex-alCntr-juBtw mt-3 w-100'>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>아이스 카페라떼</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>아이스 드립 커피</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>바닐라 라떼</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='btn_row_wrap3 flex-alCntr-juBtw mt-3 w-100'>
+                                        <div class='pe-2 w-33 pg_4_answer'>
+                                            <div class='thumbBtn w-100 pg_4_answer'>
+                                                <img class='thumbBtnImg pg_4_answer' src />
+                                                <div class='txt pe-2 pg_4_answer'>아메리카노</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>카페라떼</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>카푸치노</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='btn_row_wrap3 flex-alCntr-juBtw mt-3 w-100'>
+                                        <div class='pe-2 w-33'>
+                                            <div class='thumbBtn w-100'>
+                                                <img class='thumbBtnImg' src />
+                                                <div class='txt pe-2'>드립커피</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='bottom_btns w-100'>
+                                <div class='left yellow_bg flex-alCntr-juCntr-col'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-qr-code" viewBox="0 0 16 16">
+                                        <path d="M2 2h2v2H2V2Z" />
+                                        <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
+                                        <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
+                                        <path
+                                            d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z" />
+                                        <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z" />
+                                    </svg>
+                                    <div class='text-medium txt-cntr py-2'>포인트를 적립하세요<br></br>결제 전 선택 필수</div>
+                                    <div class=''></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="sve-1em bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                                <div class='right flex-alCntr-juCntr-col w-100'>
+                                    <div class='sm_btns_wrap flex-alFS-juFS-col mb-2 w-100'>
+                                        <div class='w-100 flex-alCntr-juBtw mb-2'>
+                                            <div class='price_wrap'>
+                                                <!-- <div class='red_badge'>1</div> -->
+                                                <div class='price text-xx-large w-100'>₩0</div>
+                                            </div>
+                                            <div class='gotoPayBtn'>주문내역 확인 후 결제하기</div>
+                                        </div>
+                                        <div class='w-100 flex-alCntr-juBtw'>
+                                            <div class='sm_btn d-flex me-3'>
+                                                <div class='text-x-large'>처음으로</div>
+                                            </div>
+                                            <div class='sm_btn d-flex'>
+                                                <div class='text-x-large'>도움기능</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 5 ------------------------------>
+                    <div class='page' id='p5'>
+                        <div class='page_wrap order btm_sm2'>
+                            <div class='side_menu flex-alCntr-juCntr '>
+                                <div class='side_menu_left'>
+                                    <div class='logo_btn'>
+                                        <div class='text-bold text-xxx-large flex-alCntr-juCntr yellow m-4'>W</div>
+                                    </div>
+                                    <div class='menu_btn_wrap size'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-circle svg-1em lightgray"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        </svg>
+                                        <div class='txt ms-2'>사이즈</div>
+                                    </div>
+                                    <div class='blankk'>주문 확인하기</div>
+                                </div>
+                                <div class='side_menu_right scroller flex-alFS-juFS-col p-3'>
+                                    <div class='mb-4'>아메리카노 - 미디엄</div>
+                                    <div class='text-xx-large text-bold'>사이즈</div>
+                                    <div class='btn_row_wrap3 flex-alCntr-juBtw mt-1 w-100'>
+                                        <div class='pe-2 w-33 pg_5_answer'>
+                                            <div class='thumbBtn w-100 pg_5_answer'>
+                                                <img class='thumbBtnImg pg_5_answer' src />
+                                                <div class='txt pe-2 pg_5_answer'>아메리카노 미디엄</div>
+                                            </div>
+                                        </div>
+                                        <div class='pe-2 w-33 pg_5_answer'>
+                                            <div class='thumbBtn w-100 pg_5_answer'>
+                                                <img class='thumbBtnImg pg_5_answer' src />
+                                                <div class='txt pe-2 pg_5_answer'>아메리카노 라지</div>
+                                            </div>
+                                        </div>
+                                        <div class='w-33'></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='bottom_btns w-100'>
+                                <div class='sm_btns_wrap mb-2 w-100'>
+                                    <div class='long_btn mb-4'>취소</div>
+                                    <div class='w-100 li'>
+                                        <div class='flex-alCntr-juBtw doubleBtn_wrap'>
+                                            <div class='sm_btn d-flex me-3'>
+                                                <div class='text-x-large'>처음으로</div>
+                                            </div>
+                                            <div class='sm_btn d-flex'>
+                                                <div class='text-x-large'>도움기능</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 6 ------------------------------>
+                    <div class='page' id='p6'>
+                        <div class='page_wrap order btm_sm2'>
+                            <div class='bottom_btns_top'>
+                                <div class='w-100'>
+                                    <div class='text-bold text-xx-large yellow'>W</div>
+                                </div>
+                                <div class='text-xxx-large d-flex w-100'>
+                                    아메리카노 - 미디엄
+                                </div>
+                                <div class='text-bold text-xxx-large d-flex mb-4 w-100'>
+                                    ₩2,600&nbsp;&nbsp;12 Kcal
+                                </div>
+                                <img class='img_big mt-4' src />
+                            </div>
+                            <div class='bottom_btns w-100'>
+                                <div class='sm_btns_wrap mb-2 w-100'>
+                                    <div class='w-100 qunt_add_wrap flex-alCntr-juCntr mb-3'>
+                                        <div class='left'>1</div>
+                                        <div class='right ps-4 pe-4'>+</div>
+                                    </div>
+                                    <div class='w-100 flex-alCntr-juBtw mb-3'>
+                                        <div class='cancle_btn'>취소</div>
+                                        <div class='add_cart_btn pg_6_answer'>장바구니 추가</div>
+                                    </div>
+                                    <div class='w-100 li'>
+                                        <div class='flex-alCntr-juBtw doubleBtn_wrap'>
+                                            <div class='sm_btn d-flex me-3'>
+                                                <div class='text-x-large'>처음으로</div>
+                                            </div>
+                                            <div class='sm_btn d-flex'>
+                                                <div class='text-x-large'>도움기능</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 7 ------------------------------>
+                    <div class='page' id='p7'>
+                        <div class='page_wrap order btm_sm2'>
+                            <div class='bottom_btns_top'>
+                                <div class='text-bold text-xx-large flex-alCntr-juCntr yellow m-4'>W</div>
+                                <div class='text-bold text-xxx-large flex-alCntr-juCntr txt-cntr'>
+                                    결제 방법을 선택해주세요<br>
+                                    포인트 적립은 "이전단계" 선택
+                                </div>
+                                <div class="btn_row_wrap3 flex-alCntr-juBtw mt-3 w-100 px-4 ">
+                                    <div class="pe-2 w-33">
+                                        <div class="pay_selc_btn w-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                                                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                            </svg>
+                                            <div class="pt-2">모바일 상품권</div>
+                                            <div class='text-large txt-cntr'>MOBILE GIFT CARD</div>
+                                        </div>
+                                    </div>
+                                    <div class="pe-2 w-33 pg_7_answer">
+                                        <div class="pay_selc_btn w-100 pg_7_answer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-credit-card-fill pg_7_answer" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z" />
+                                            </svg>
+                                            <div class="pt-2 pg_7_answer">카드 결제</div>
+                                            <div class='text-large txt-cntr pg_7_answer'>CARD PAYMENT</div>
+                                        </div>
+                                    </div>
+                                    <div class="pe-2 w-33"></div>
+                                </div>
+                            </div>
+                            <div class='bottom_btns w-100'>
+                                <div class='sm_btns_wrap mb-2 w-100'>
+                                    <div class='prev_btn'>이전 단계</div>
+                                    <div class='w-100 li'>
+                                        <div class='flex-alCntr-juBtw doubleBtn_wrap'>
+                                            <div class='sm_btn d-flex me-3'>
+                                                <div class='text-x-large'>처음으로</div>
+                                            </div>
+                                            <div class='sm_btn d-flex'>
+                                                <div class='text-x-large'>도움기능</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 8 ------------------------------>
+                    <div class='page' id='p8'>
+                        <div class='page_wrap order btm_sm2'>
+                            <div class='bottom_btns_top'>
+                                <div class='w-100'>
+                                    <div class='text-bold text-xx-large flex-alCntr-juCntr yellow m-4'>W</div>
+                                    <div class='text-bold text-xxx-large flex-alCntr-juCntr txt-cntr'>
+                                        결제를 진행해 주세요
+                                    </div>
+                                </div>
+                                <img class="img_big mt-4" src="" />
+                                <div class=''></div>
+                            </div>
+                            <div class='bottom_btns flex-alCntr-juAr w-100'>
+                                <div class='prev_btn me-4 pg_8_answer'>카드 투입구에 넣기</div>
+                                <div class='prev_btn'>취소</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 9 ------------------------------>
+                    <div class='page' id='p9'>
+                        <div class='page_wrap order btm_sm2'>
+                            <div class='bottom_btns_top'>
+                              <div class='w-100'>
+                                <div class='text-bold text-xx-large flex-alCntr-juCntr yellow m-4'>W</div>
+                                <div class='text-bold text-xxx-large flex-alCntr-juCntr txt-cntr'>
+                                  주문이 접수되었습니다<br>
+                                  영수증을 받으세요
+                                </div>
+                              </div>
+                              <div class='receipt flex-alCntr-juCntr-col'>
+                                <div class='text-xxx-large pb-2'>주문</div>
+                                <div class='flex-alCntr-juCntr'>
+                                  <div class='under me-4'>•••</div>
+                                  <div class='text-bold order_num'>5947</div>
+                                </div>
+                              </div>
+                              <div class=''></div>
+                            </div>
+                            <div class='bottom_btns flex-alCntr-juAr w-100'>
+                              <div class='prev_btn pg_9_answer end_pt'>영수증 받기</div>
+                            </div>
+                          </div>
+                    </div>
 
-            </div>
-          </div>
+                </main>
+                <div class="ctrlbar" id="ctrlbar">
+                    <div class="bottom_bar px-3 py-3">
+                        <div class="d-flex">
+                            <div class="text-x-large text-bold" id="prev_btn">임시⬅️</div>
+                            <div class="text-x-large text-bold" id="next_btn">➡️</div>
+                        </div>
+                        <div id="help_btn">
 
-        </main>
-        <div class="ctrlbar" id="ctrlbar">
-          <div class="bottom_bar px-3 py-3">
-<div class="d-flex">
-  <div class="text-x-large text-bold" id="prev_btn">임시⬅️</div>
-                <div class="text-x-large text-bold" id="next_btn">➡️</div>
-</div>
-            <div id="help_btn">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-question-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                <path
-                  d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
-              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-question-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                            </svg>
+                        </div>
+                        <div class="skip_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="skip_btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-skip-end-fill" viewBox="0 0 16 16">
-                <path
-                  d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z" />
-              </svg>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <script src="../common/js/localstorage.js"> </script>
-  <script src="pg_info.js"> </script>
-  <script src="../common/js/pg_handler.js"> </script>
+    <script src="../common/js/localstorage.js"> </script>
+    <script src="pg_info.js"> </script>
+    <script src="../common/js/pg_handler.js"> </script>
 </body>
 
 </html>
