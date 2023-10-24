@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Literacy</title>
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link href="../common/styles/font.css" rel="stylesheet" />
+    <link href="../common/styles/common.css" rel="stylesheet" />
+    <link href="./styles/layout.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <div id="bg_phone">
+        <div id="view_wrap">
+            <div id="view">
+                <main class="main main-93" , id="main" , role="main">
+                    <!-- Modal : instruction -->
+                    <div class="modal fade" id="modalForInit">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                </div>
+                                <div class="modal-body">
+                                    모달 내용
+                                </div>
+                                <div class="modal-footer border-0 ">
+                                    <button type="button" class="btn btn-secondary btn-lg"
+                                        data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop">
+                        <div class="modal-dialog modal-sm modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                </div>
+                                <div class="modal-body">
+                                    모달 내용
+                                </div>
+                                <div class="modal-footer border-0 ">
+                                    <button type="button" class="btn btn-secondary btn-lg"
+                                        data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 1 ------------------------------>
+                    <div class='page' id='p1'>
+                        <div class="page_wrap bank-main">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class='gray'>고객님의 정보를 확인해 주세요</div>
+                                <div class=''>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="me-4 svg-15em bi bi-person" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="svg-15em bi bi-bell" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class='scroller w-100 '>
+                                <div class='account_tab flex-alCntr-juCntr-col'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class=''>평생 456-1004-****</div>
+                                        <div class='d-flex'>
+                                            <div class='text-medium pe-2'>금액</div>
+                                            <div class='text-medium off'>OFF</div>
+                                        </div>
+                                    </div>
+                                    <div class='flex-alCntr-juBtw w-100 py-4 my-4'>
+                                        <div class=''></div>
+                                        <div class=''>금액숨김</div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="svg-15em bi bi-three-dots-vertical"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class='flex-alCntr-juAr w-100'>
+                                        <div class=''>조회</div>
+                                        <div class=''>|</div>
+                                        <div class=''>이체</div>
+                                        <div class=''>|</div>
+                                        <div class=''>모으기</div>
+                                    </div>
+                                </div>
+                                <div class='w-100 d-flex flex-alCntr-juCntr'>
+                                    <span class='darkgreen text-xx-large'>•</span>
+                                    <span class='lightgray text-xx-large'>•</span>
+                                </div>
+                                <div class='flex-alCntr-juCntr icons_tab p-4'>
+                                    <div class='icon_wrap flex-alCntr-juCntr-col pe-4'>
+                                        <img class='icon' src='' />
+                                        <div class=''>마이메뉴</div>
+                                    </div>
+                                    <div class='icon_wrap flex-alCntr-juCntr-col pe-4'>
+                                        <img class='icon' src='' />
+                                        <div class=''>전체계좌</div>
+                                    </div>
+                                    <div class='icon_wrap flex-alCntr-juCntr-col pe-4'>
+                                        <img class='icon' src='' />
+                                        <div class=''>생활혜택</div>
+                                    </div>
+                                    <div class='icon_wrap flex-alCntr-juCntr-col pe-4'>
+                                        <img class='icon' src='' />
+                                        <div class=''>평생페이</div>
+                                    </div>
+                                </div>
+                                <div class='flex-alCntr-juBtw p-4 pb-0'>
+                                    <div class=''>마이데이터 가입하고 바로 확인하세요!</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right gray svg-1em" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                                <div class="xScroller top_col flex-alCntr-juBtw py-3 mt-1 p-4">
+                                    <img class="bannerImg w-100 me-4" src="" />
+                                    <img class="bannerImg w-100" src="" />
+                                </div>
+                                <div class='banners_wrap p-4 flex-alCntr-juCntr-col'>
+                                    <img class="bannerImg w-100 mb-4" src="" />
+                                    <img class="bannerImg w-100" src="" />
+                                </div>
+                            </div>
+                            <div class="bottombar p-3 w-100">
+                                <div class="flex-alFS-juFS-col">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="svg-15em bi bi-house-door-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                    </svg>
+                                    홈
+                                </div>
+                                <div class="flex-alFS-juFS-col gray">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="svg-15em bi bi-coin" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                                    </svg>
+                                    계좌
+                                </div>
+                                <div class="flex-alFS-juFS-col gray">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="svg-15em bi bi-bag" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg>
+                                    상품
+                                </div>
+                                <div class="flex-alFS-juFS-col gray">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="svg-15em bi bi-bar-chart-line" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
+                                    </svg>
+                                    자산
+                                </div>
+                                <div class="flex-alFS-juFS-col gray">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="svg-15em bi bi-list" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                    전체
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 2 ------------------------------>
+                    <div class='page' id='p2'>
+                        <div class="page_wrap transfer">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'>즉시·예약이체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 ps-2'>출금계좌</div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='d-flex pb-4'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class=''>
+                                                <div class=''>평생 456-1004-****</div>
+                                                <div class='lightgray'>WON 통장</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-1em" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                    <div class='darkgreen w-100 '>이체가능금액 153,000원</div>
+                                </div>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 flex-alCntr-juBtw'>
+                                    <div class='ps-2'>받는분</div>
+                                    <div class='flex-alCntr-juCntr'>
+                                        <div class='pe-4'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-clock-history me-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                                                <path
+                                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                            최근·자주·내계좌
+                                        </div>
+                                        <div class='pe-2'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
+                                            연락처
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='flex-alCntr-juCntr'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class='px-2'>
+                                                평생은행
+                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down svg-1em  ms-4"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </div>
+                                        <div class='lightgray'>입금할 계좌번호</div>
+                                    </div>
+                                </div>
+                                <div class='box w-100 mt-4'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='text-xx-large text-bold lightgray'>
+                                            ₩
+                                        </div>
+                                        <div class='lightgray'>보낼 금액</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottombar p-3 w-100">
+                                <div class='round'>
+                                    간편이체 가입 중입니다.
+                                    <span class='text-bold'>
+                                        미지정기기 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 3 ------------------------------>
+                    <div class='page' id='p3'>
+                        <div class="page_wrap transfer">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'>즉시·예약이체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 ps-2'>출금계좌</div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='d-flex pb-4'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class=''>
+                                                <div class=''>평생 456-1004-****</div>
+                                                <div class='lightgray'>WON 통장</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-1em" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                    <div class='darkgreen w-100 '>이체가능금액 153,000원</div>
+                                </div>
+                            </div>
+                            <div class='p-4 '>
+                                <div class='pb-2 flex-alCntr-juBtw'>
+                                    <div class='ps-2'>받는분</div>
+                                    <div class='flex-alCntr-juCntr'>
+                                        <div class='pe-4'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-clock-history me-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                                                <path
+                                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                            최근·자주·내계좌
+                                        </div>
+                                        <div class='pe-2'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
+                                            연락처
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='flex-alCntr-juCntr'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class='px-2'>
+                                                평생은행
+                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down svg-1em  ms-4"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </div>
+                                        <div class='lightgray'>입금할 계좌번호</div>
+                                    </div>
+                                </div>
+                                <div class='box w-100 mt-4'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='text-xx-large text-bold lightgray'>
+                                            ₩
+                                        </div>
+                                        <div class='lightgray'>보낼 금액</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-bar addShadow d-flex flex-column align-items-center">
+                                <div class='flex-alCntr-juBtw w-100'>
+                                    <div class='text-bold ps-4'>입금은행 선택</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                    </svg>
+                                </div>
+                                <div class='flex-alCntr-juAr w-100 p-4'>
+                                    <div class='w-30 text-center text-bold underline p-3'>은행</div>
+                                    <div class='w-30 text-center lightgray'>증권사</div>
+                                </div>
+                                <div class='py-4 li flex-alCntr-juCntr w-100 px-4'>
+                                    <div class='flex-alFS-juFS w-50'>
+                                        <img class="logoImg me-4" src="" />
+                                        평생은행
+                                    </div>
+                                    <div class='flex-alFS-juFS w-50'>
+                                        <img class="logoImg me-4" src="" />
+                                        대한은행
+                                    </div>
+                                    <div class=''></div>
+                                </div>
+                                <div class='py-4 pt-2 li flex-alCntr-juCntr w-100 px-4'>
+                                    <div class='flex-alFS-juFS w-50'>
+                                        <img class="logoImg me-4" src="" />
+                                        무궁화은행
+                                    </div>
+                                    <div class='flex-alFS-juFS w-50'>
+                                        <img class="logoImg me-4" src="" />
+                                        사랑은행
+                                    </div>
+                                    <div class=''></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 4 ------------------------------>
+                    <div class='page' id='p4'>
+                        <div class="page_wrap transfer">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'>즉시·예약이체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 ps-2'>출금계좌</div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='d-flex pb-4'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class=''>
+                                                <div class=''>평생 456-1004-****</div>
+                                                <div class='lightgray'>WON 통장</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-1em" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                    <div class='darkgreen w-100 '>이체가능금액 153,000원</div>
+                                </div>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 flex-alCntr-juBtw'>
+                                    <div class='ps-2'>받는분</div>
+                                    <div class='flex-alCntr-juCntr'>
+                                        <div class='pe-4'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-clock-history me-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                                                <path
+                                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                            최근·자주·내계좌
+                                        </div>
+                                        <div class='pe-2'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
+                                            연락처
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='flex-alCntr-juCntr'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class='px-2'>
+                                                평생은행
+                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down svg-1em  ms-4"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </div>
+                                        <!-- <input class="lightgray w-90 answer_auto_txt pg_4_answer 4_input"
+                                            id="exampleFormControlInput1" placeholder="입금할 계좌번호" disabled> -->
+                                        <div class='lightgray w-100 pg_4_answer'>입금할 계좌번호</div>
+                                    </div>
+                                </div>
+                                <div class='box w-100 mt-4'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='text-xx-large text-bold lightgray'>
+                                            ₩
+                                        </div>
+                                        <div class='lightgray'>보낼 금액</div>
+                                    </div>
+                                </div>
+                                <div class="bottombar p-3 w-100">
+                                    <div class='round'>
+                                        간편이체 가입 중입니다.
+                                        <span class='text-bold'>
+                                            미지정기기 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 5 ------------------------------>
+                    <div class='page' id='p5'>
+                        <div class="page_wrap transfer">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'>즉시·예약이체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 ps-2'>출금계좌</div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='d-flex pb-4'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class=''>
+                                                <div class=''>평생 456-1004-****</div>
+                                                <div class='lightgray'>WON 통장</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-1em" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                    <div class='darkgreen w-100 '>이체가능금액 153,000원</div>
+                                </div>
+                            </div>
+                            <div class='p-4 '>
+                                <div class='pb-2 flex-alCntr-juBtw'>
+                                    <div class='ps-2'>받는분</div>
+                                    <div class='flex-alCntr-juCntr'>
+                                        <div class='pe-4'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-clock-history me-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                                                <path
+                                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                            최근·자주·내계좌
+                                        </div>
+                                        <div class='pe-2'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
+                                            연락처
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='flex-alCntr-juCntr'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class='px-2'>
+                                                평생은행
+                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down svg-1em  ms-4"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </div>
+                                        <div class='lightgray'>입금할 계좌번호</div>
+                                    </div>
+                                </div>
+                                <div class='box w-100 mt-4'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='text-xx-large text-bold lightgray'>
+                                            ₩
+                                        </div>
+                                        <div class='lightgray'>보낼 금액</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-bar input_box addShadow d-flex flex-column align-items-center pt-0">
+                                <div class='flex-alCntr-juBtw w-100 p-4 pt-0'>
+                                    <div class='flex-alCntr-juAr popup_top_left'>
+                                        <div class='w-30 text-center text-bold topline p-3'>직접입력</div>
+                                        <div class='w-30 text-center lightgray'>최근</div>
+                                        <div class='w-30 text-center lightgray'>자주</div>
+                                        <div class='w-30 text-center lightgray'>내계좌</div>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                    </svg>
+                                </div>
+                                <div class="w-100 px-4">
+                                    <div class="flex-alCntr-juBtw w-100">
+                                        <div class="flex-alCntr-juCntr">
+                                            <img class="logoImg me-4" src="" />
+                                            <div class="px-2">평생은행</div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down svg-1em  ms-4"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class=''></div>
+                                    </div>
+                                    <div class='input'> 입금할 계좌번호</div>
+                                </div>
+                                <div class="h-43 pt-1 pb-3 w-100 pg_5_answer ID7_input">
+                                    <div class="mt-4 d-flex justify-content-around">
+                                        <div class="num text-xx-large input_1 pg_5_answer ID7_input pw7">1</div>
+                                        <div class="num text-xx-large input_2 pg_5_answer ID7_input pw7">2</div>
+                                        <div class="num text-xx-large input_3 pg_5_answer ID7_input pw7">3</div>
+                                    </div>
+                                    <div class="mt-4 d-flex justify-content-around">
+                                        <div class="num text-xx-large input_4 pg_5_answer ID7_input pw7">4</div>
+                                        <div class="num text-xx-large input_5 pg_5_answer ID7_input pw7">5</div>
+                                        <div class="num text-xx-large input_6 pg_5_answer ID7_input pw7">6</div>
+                                    </div>
+                                    <div class="mt-4 d-flex justify-content-around">
+                                        <div class="num text-xx-large input_7 pg_5_answer ID7_input pw7">7</div>
+                                        <div class="num text-xx-large input_8 pg_5_answer ID7_input pw7">8</div>
+                                        <div class="num text-xx-large input_9 pg_5_answer ID7_input pw7">9</div>
+                                    </div>
+                                    <div class="mt-4 d-flex justify-content-around">
+                                        <div class="num text-xx-large input_0 pg_5_answer ID7_input pw7">0</div>
+                                        <div class="num text-xx-large pop_input pg_5_answer ID7_input pw7">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                                fill="currentColor"
+                                                class="bi bi-arrow-left-short pop_input pg_5_answer ID7_input pw7"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class="num text-xx-large  ok px-2">확인</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 6 ------------------------------>
+                    <div class='page' id='p6'>
+                        <div class="page_wrap transfer">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'>즉시·예약이체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 ps-2'>출금계좌</div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='d-flex pb-4'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class=''>
+                                                <div class=''>평생 456-1004-****</div>
+                                                <div class='lightgray'>WON 통장</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-1em" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                    <div class='darkgreen w-100 '>이체가능금액 153,000원</div>
+                                </div>
+                            </div>
+                            <div class='p-4'>
+                                <div class='pb-2 flex-alCntr-juBtw'>
+                                    <div class='ps-2'>받는분</div>
+                                    <div class='flex-alCntr-juCntr'>
+                                        <div class='pe-4'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-clock-history me-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                                                <path
+                                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                            최근·자주·내계좌
+                                        </div>
+                                        <div class='pe-2'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
+                                            연락처
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='flex-alCntr-juCntr'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class='px-2'>
+                                                평생은행
+                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down svg-1em  ms-4"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </div>
+                                        <div class='w-100 inputnum'>456 10 028153</div>
+                                    </div>
+                                </div>
+                                <div class='box w-100 mt-4'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='text-xx-large text-bold lightgray'>
+                                            ₩
+                                        </div>
+                                        <div class='lightgray'>보낼 금액</div>
+                                    </div>
+                                </div>
+                                <div class="bottomKeypad flex-alFS-juFS-col p-3 w-100">
+                                    <div class='flex-alCntr-juAr w-100'>
+                                        <div class='price_btn_wrap'>
+                                            <div class='price_btn'>+100만</div>
+                                        </div>
+                                        <div class='price_btn_wrap'>
+                                            <div class='price_btn'>+10만</div>
+                                        </div>
+                                        <div class='price_btn_wrap'>
+                                            <div class='price_btn'> +5만</div>
+                                        </div>
+                                        <div class='price_btn_wrap'>
+                                            <div class='price_btn'>+1만</div>
+                                        </div>
+                                        <div class='price_btn_wrap'>
+                                            <div class='price_btn green_bg'>전액</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="h-43 pt-1 pb-3 w-100 pg_6_answer ID7_input">
+                                        <div class="mt-4 d-flex justify-content-around">
+                                            <div class="num text-xx-large input_1 pg_6_answer ID7_input pw7">1</div>
+                                            <div class="num text-xx-large input_2 pg_6_answer ID7_input pw7">2</div>
+                                            <div class="num text-xx-large input_3 pg_6_answer ID7_input pw7">3</div>
+                                        </div>
+                                        <div class="mt-4 d-flex justify-content-around">
+                                            <div class="num text-xx-large input_4 pg_6_answer ID7_input pw7">4</div>
+                                            <div class="num text-xx-large input_5 pg_6_answer ID7_input pw7">5</div>
+                                            <div class="num text-xx-large input_6 pg_6_answer ID7_input pw7">6</div>
+                                        </div>
+                                        <div class="mt-4 d-flex justify-content-around">
+                                            <div class="num text-xx-large input_7 pg_6_answer ID7_input pw7">7</div>
+                                            <div class="num text-xx-large input_8 pg_6_answer ID7_input pw7">8</div>
+                                            <div class="num text-xx-large input_9 pg_6_answer ID7_input pw7">9</div>
+                                        </div>
+                                        <div class="mt-4 d-flex justify-content-around">
+                                            <div class="num text-xx-large input_0 pg_6_answer ID7_input pw7">0</div>
+                                            <div class="num text-xx-large pop_input pg_6_answer ID7_input pw7">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                                    fill="currentColor"
+                                                    class="bi bi-arrow-left-short pop_input pg_6_answer ID7_input pw7"
+                                                    viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="num text-xx-large ok px-2">확인</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 7 ------------------------------>
+                    <div class='page' id='p7'>
+                        <div class="page_wrap transfer">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'>즉시·예약이체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='p-4 pb-1'>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='d-flex pb-4'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class=''>
+                                                <div class=''>평생 456-1004-****</div>
+                                                <div class='lightgray'>WON 통장</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-1em" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                    <div class='darkgreen w-100 '>이체가능금액 153,000원</div>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down w-100 svg-1em gray" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            <div class='p-4 pt-1'>
+                                <div class='box w-100 accnt_info'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='flex-alCntr-juCntr'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class='px-2'>
+                                                평생은행&nbsp;&nbsp;<br></br>김도겸
+                                            </div>
+                                        </div>
+                                        <div class='w-100 inputnum'>456 10 028153</div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-15em ms-4"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class='box w-100 mt-4'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='text-xx-large text-bold lightgray'>
+                                            ₩
+                                        </div>
+                                        <div class=''><span class='text-xx-large text-bold pe-2'>100,000</span>원</div>
+                                    </div>
+                                    <div class='lightline'></div>
+                                    <div class='flex-alCntr-juBtw w-100 py-4'>
+                                        <div class='lightgray py-2'>받는 통장 표기</div>
+                                        <div class=''>유정화</div>
+                                    </div>
+                                    <div class='lightline'></div>
+                                    <div class='flex-alCntr-juBtw w-100 py-4'>
+                                        <div class='lightgray py-2'>내 통장 표기</div>
+                                        <div class=''>김도겸</div>
+                                    </div>
+                                    <div class='flex-alFS-juFE w-100 text-medium lightgray'>
+                                        더보기
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down ms-2" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class='ps-2 pt-3 gray'>
+                                    알아두세요
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="ms-2 bi bi-info-circle" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                    </svg>
+                                </div>
+                                <div class='bottom_btn_wrap'>
+                                    <div class='ok_btn text-xx-large'>확인</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 8 ------------------------------>
+                    <div class='page' id='p8'>
+                        <div class="page_wrap transfer">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'>즉시·예약이체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='p-4 pb-1'>
+                                <div class='box w-100'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='d-flex pb-4'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class=''>
+                                                <div class=''>평생 456-1004-****</div>
+                                                <div class='lightgray'>WON 통장</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-1em" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                    <div class='darkgreen w-100 '>이체가능금액 153,000원</div>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down w-100 svg-1em gray" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            <div class='p-4 pt-1'>
+                                <div class='box w-100 accnt_info'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='flex-alCntr-juCntr'>
+                                            <img class="logoImg me-4" src="" />
+                                            <div class='px-2'>
+                                                평생은행&nbsp;&nbsp;<br></br>김도겸
+                                            </div>
+                                        </div>
+                                        <div class='w-100 inputnum'>456 10 028153</div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down svg-15em ms-4"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class='box w-100 mt-4'>
+                                    <div class='flex-alCntr-juBtw w-100'>
+                                        <div class='text-xx-large text-bold lightgray'>
+                                            ₩
+                                        </div>
+                                        <div class=''><span class='text-xx-large text-bold pe-2'>100,000</span>원</div>
+                                    </div>
+                                    <div class='lightline'></div>
+                                    <div class='flex-alCntr-juBtw w-100 py-4'>
+                                        <div class='lightgray py-2'>받는 통장 표기</div>
+                                        <div class=''>유정화</div>
+                                    </div>
+                                    <div class='lightline'></div>
+                                    <div class='flex-alCntr-juBtw w-100 py-4'>
+                                        <div class='lightgray py-2'>내 통장 표기</div>
+                                        <div class=''>김도겸</div>
+                                    </div>
+                                    <div class='flex-alFS-juFE w-100 text-medium lightgray'>
+                                        더보기
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-down ms-2" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class='ps-2 pt-3 gray'>
+                                    알아두세요
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="ms-2 bi bi-info-circle" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                    </svg>
+                                </div>
+
+                                <div
+                                    class="popup-bar info-popup input_box addShadow d-flex flex-column align-items-center pt-0">
+                                    <div class="flex-alCntr-juBtw w-100 p-4 pt-0">
+                                        <div class="flex-alCntr-juAr popup_top_left">
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-x-lg svg-1em mt-4" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class='text-xx-large w-100'> <span class='recipient text-bold'>김도겸</span> 님에게
+                                    </div>
+                                    <div class='w-100 text-xx-large'><span class='text-bold'>100,000원</span>을 이체합니다.
+                                    </div>
+                                    <div class="darkline pt-4"></div>
+                                    <div class='transfer_info_wrap w-100 flex-alFS-juFS-col'>
+                                        <div class='flex-alFS-juFS w-100 py-4'>
+                                            <div class='left lightgray'>출금계좌</div>
+                                            <div class='right'>평생은행<br></br>1002 852 765814</div>
+                                        </div>
+                                        <div class="lightline"></div>
+                                        <div class='flex-alFS-juFS w-100 py-4'>
+                                            <div class='left lightgray'>받는분</div>
+                                            <div class='right'>김도겸<br></br>평생은행<br></br>456-1002-8153</div>
+                                        </div>
+                                        <div class="lightline"></div>
+                                        <div class='flex-alFS-juFS w-100 py-4'>
+                                            <div class='left lightgray'>보낼금액</div>
+                                            <div class='right'>100,000원</div>
+                                        </div>
+                                        <div class="lightline"></div>
+                                        <div class='flex-alFS-juFS w-100 py-4'>
+                                            <div class='left lightgray'>수수료</div>
+                                            <div class='right'>면제</div>
+                                        </div>
+                                        <div class="lightline"></div>
+                                        <div class="flex-alFS-juFE w-100 text-medium lightgray pt-4">
+                                            더보기
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down ms-2" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_btn_wrap">
+                                        <div class="left_btn text-xx-large">추가이체</div>
+                                        <div class="right_btn text-xx-large">이체하기</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------ page 9 ------------------------------>
+                    <div class='page' id='p9'>
+                        <div class="page_wrap pw-input">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                                <div class=''></div>
+                                <div class='text-xx-large'></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+                            <div class='green w-100 flex-alCntr-juCntr pt-4 mt-2'>
+                                <span class='text-bold'>유정화</span>님의 금융인증서
+                            </div>
+                            <div class='text-xx-large pt-2 pb-4 w-100 flex-alCntr-juCntr'>
+                                <span class='text-bold'>비밀번호를 입력</span>해주세요
+                            </div>
+                            <div class="nav-item d-flex justify-content-center my-3 pt-4 mt-4">
+                                <span class="dot dot0"></span>
+                                <span class="dot dot1"></span>
+                                <span class="dot dot2"></span>
+                                <span class="dot dot3"></span>
+                            </div>
+                            <div class='w-100 flex-alCntr-juCntr pt-2'>
+                                <div class='pwhelp text-medium'>
+                                    비밀번호를 잊으셨나요?
+                                </div>
+                            </div>
+                            <div class="under_bar_keypad h-40 pt-5 pw_4_input pg_9_answer">
+                                <div class="d-flex justify-content-around">
+                                    <div class="num pw_4_input pg_9_answer input_8">8</div>
+                                    <div class="num pw_4_input pg_9_answer input_5">5</div>
+                                    <div class="num pw_4_input pg_9_answer input_9">9</div>
+                                </div>
+                                <div class="d-flex justify-content-around">
+                                    <div class="num pw_4_input pg_9_answer input_2">2</div>
+                                    <div class="num pw_4_input pg_9_answer input_1">1</div>
+                                    <div class="num pw_4_input pg_9_answer input_4">4</div>
+                                </div>
+                                <div class="d-flex justify-content-around">
+                                    <div class="num pw_4_input pg_9_answer input_7">7</div>
+                                    <div class="num pw_4_input pg_9_answer input_3">3</div>
+                                    <div class="num pw_4_input pg_9_answer input_6">6</div>
+                                </div>
+                                <div class="d-flex justify-content-around">
+                                    <div class="num"></div>
+                                    <div class="num pw_4_input pg_9_answer input_0">0</div>
+                                    <div class="num">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                            fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!------------------------------ page 10 ------------------------------>
+                    <div class='page' id='p10'>
+                        <div class="page_wrap result">
+                            <div class="tab_top tab flex-alCntr-juBtw">
+                              <div class=''></div>
+                              <div class='text-xx-large'></div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-x-lg svg-1em" viewBox="0 0 16 16">
+                                <path
+                                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                              </svg>
+                            </div>
+                            <div class='result_wrap flex-alCntr-juCntr-col'>
+                              <div class='check_icon w-100 flex-alCntr-juCntr-col pb-4'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16">
+                                  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" />
+                                </svg>
+                                <div class='text-xx-large py-4'>이체 완료</div>
+                              </div>
+                              <div class="darkline pt-4"></div>
+                              <div class="transfer_info_wrap w-100 flex-alFS-juFS-col">
+                                <div class="lightline"></div>
+                                <div class="flex-alFS-juFS w-100 py-4">
+                                  <div class="left lightgray">받는 계좌</div>
+                                  <div class="right">김도겸<br></br>평생은행<br></br>456-1002-8153</div>
+                                </div>
+                                <div class="lightline"></div>
+                                <div class="flex-alFS-juFS w-100 py-4">
+                                  <div class="left lightgray">이체금액</div>
+                                  <div class="right">100,000원</div>
+                                </div>
+                                <div class="lightline"></div>
+                                <div class="flex-alFS-juFS w-100 py-4">
+                                  <div class="left lightgray">수수료</div>
+                                  <div class="right">면제</div>
+                                </div>
+                                <div class="lightline"></div>
+                                <div class='flex-alCntr-juBtw lightgray w-100'>
+                                  <div class="flex-alFS-juCntr  text-medium lightgray pt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill me-2" viewBox="0 0 16 16">
+                                      <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z" />
+                                    </svg>
+                                    공유하기
+                                  </div>
+                                  <div class="flex-alFS-juCntr  text-medium lightgray pt-4">
+                                    더보기
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down ms-2" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                      </path>
+                                    </svg>
+                                  </div>
+                                </div >
+                              </div>
+                            </div>
+                            <div class="bottom_btn_wrap ">
+                              <div class="btns_wrap flex-alCntr-juBtw pb-4">
+                                <div class="left_btn">추가이체</div>
+                                <div class="right_btn">이체하기</div>
+                              </div>
+                              <div class="ok_btn text-xx-large">확인</div>
+                            </div>
+                          </div>
+                    </div>
+
+                </main>
+                <div class="ctrlbar" id="ctrlbar">
+                    <div class="bottom_bar px-3 py-3">
+                        <div class="d-flex">
+                            <div class="text-x-large text-bold" id="prev_btn">임시⬅️</div>
+                            <div class="text-x-large text-bold" id="next_btn">➡️</div>
+                        </div>
+                        <div id="help_btn">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-question-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                            </svg>
+                        </div>
+                        <div class="skip_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../common/js/localstorage.js"> </script>
+    <script src="pg_info.js"> </script>
+    <script src="../common/js/pg_handler.js"> </script>
+</body>
+
+</html>

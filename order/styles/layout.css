@@ -306,6 +306,7 @@
   height: 2em;
   width: 100%;
   height: calc(var(--vh, 1vh)*13);
+  padding: 0!important;
 }
 
 .side_menu_right .thumbBtn {

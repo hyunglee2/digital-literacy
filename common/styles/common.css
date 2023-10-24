@@ -304,6 +304,25 @@ svg {
   flex-direction: column;
 }
 
+.flex-alFS-juFS {
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+}
+
+.flex-alFS-juFS-col {
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.flex-alFS-juFE {
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-end;
+}
+
 .flex-alFS-juFS-col {
   display: flex;
   align-items:flex-start;
@@ -317,10 +336,22 @@ svg {
   justify-content: space-between;
 }
 
+.flex-alCntr-juBtw-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 .flex-alCntr-juAr {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.addShadow {
+  box-shadow: rgba(0,0,0,0.3) 0 0 0 9999px;
+  z-index: 8;
 }
 
 /* +++++++++++ 스크롤러 +++++++++++ */
