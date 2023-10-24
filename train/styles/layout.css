@@ -704,7 +704,7 @@
 
 .prevDateNxt .blue {
   border: 2px solid #006dc0;
-  padding: 0.5em;
+  padding: 0.1em;
   border-radius: 2em;
   padding-left: 1em;
   padding-right: 1em;
@@ -863,7 +863,7 @@
 }
 
 #p11 .prevDateNxt {
-  height: calc(var(--vh, 10vh));
+  /* height: calc(var(--vh, 10vh)); */
 }
 
 #p11 .prevDateNxt .center{
@@ -1325,7 +1325,7 @@ display: flex;
     padding: 0.5em;
     align-items: center;
     justify-content: center;
-    height: calc(var(--vh, 1vh)*10);
+    height: calc(var(--vh, 1vh)*7);
     box-shadow: 0px 0px 40px 3px rgba(207, 207, 207, 0.35);
 }
 
@@ -1346,7 +1346,7 @@ display: flex;
   justify-content: center;
   box-shadow: 0px 0px 40px 3px rgba(207, 207, 207, 0.35);
   flex-direction: column;
-  width: 90%;
+  width: 85%;
 }
 
 .card_img_wrap {

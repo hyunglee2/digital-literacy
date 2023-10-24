@@ -55,6 +55,10 @@
   color: #009591;
 }
 
+.lightgreen_bg {
+  background: #e6eae9;
+}
+
 .boxShdw {
   box-shadow: 0px 0px 40px 3px rgba(207, 207, 207, 0.5);
 }
@@ -282,8 +286,8 @@
 }
 
 .transfer .bottomKeypad .price_btn_wrap{
-  width: 20%;
-  padding: 0.5em;
+  width: 19%;
+  padding: 0.2em;
 }
 
 .transfer .bottomKeypad .price_btn{
@@ -372,6 +376,13 @@
 }
 
 /* +++++++++++ p9 +++++++++++ */
+.transfer .popup-bar {
+padding-left: 2em;
+padding-right: 2em;
+}
+
+
+/* +++++++++++ p9 +++++++++++ */
 
 .pw-input .dot {
   display: block;
@@ -448,6 +459,8 @@
 
 .result .result_wrap {
   padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .result .bottom_btn_wrap {
