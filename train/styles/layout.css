@@ -660,6 +660,14 @@
   padding: 1em;
 }
 
+.pg_8_selected_css {
+  background: #0c3c60 !important;
+}
+
+.pg_8_selected_css div {
+  color: white !important;
+}
+
 /* +++++++++++ p9 +++++++++++ */
 #p9 .scroller, #p10 .scroller, #p12 .scroller {
   height: calc(var(--vh, 1vh)*36);
@@ -689,7 +697,6 @@
   stroke-width: 1px;
   stroke: #0c3c60;
 }
-
 
 .menu_tab {
   border : unset !important;

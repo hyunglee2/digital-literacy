@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById("prev");
     const nextBtn = document.getElementById("next");
 
+
+    var selc2Arr = [];
+
     //+++++++++++현재 사용자 데이터로 셋팅하기+++++++++++++++++
     const user = localStorage.getItem('user_now');//지금 사용자 누구
     const parse_data = JSON.parse(localStorage.getItem(user));//지금 사용자 데이터
@@ -70,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(page_num);
     });
 
-    
+
     $(document).on("click", "#help_btn", function () {
         $('#modalForInit').modal('show');
         $('.modal-body').html(instruction);
@@ -99,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         doubleSubmitFlag = false;
     }
 
-    
+
 
     var doubleSubmitFlag = false;
     function doubleSubmitCheck() {
@@ -131,11 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 location.href = "../" + nextPage + "/" + nextPage + ".html";
             }
 
-            // 자동 페이지 넘김 : train/p2, 
-            //answer_auto_txt pg_n_answer n_input
+            // 자동 페이지 넘김
+            // train/p2, p4 
+            // answer_auto_txt pg_n_answer n_input
             else if (e.target.className.includes("answer_auto_txt")) {
-
-                $('.' + real_pg + '_input').on("input", function() {
+                $('.' + real_pg + '_input').on("input", function () {
                     let unspacedValue = this.value.split(' ').join('');
                     if (unspacedValue == inputableAnswer) {
                         next();
@@ -143,10 +146,31 @@ document.addEventListener('DOMContentLoaded', () => {
                         return false;
                     }
                 });
-
-    
             }
-            
+
+
+            // 2개 선택 시 버튼 활성화, 텍스트 변경
+            // train/p8
+            //selc2_txtChange_btnActive
+            else if (e.target.className.includes("selc2_txtChange_btnActive")) {
+                for (j = 0; j <= 2; j++) {
+                    if (e.target.className.includes("input_" + j)) {
+                        selc2Arr.push(j);
+                        const set = new Set(selc2Arr);
+                        selc2Arr = [...set];
+                        console.log(selc2Arr);
+                        console.log(selc2Arr.length)
+                        if (j==1) { $(".txt_edit_" + j).html('23일 (토)');}
+                        else if (j==2) { $(".txt_edit_" + j).html('10:00');}
+                        $(".css_edit_" + j).addClass("pg_" + real_pg + "_selected_css");
+                        if (selc2Arr.length == 2) {
+                            $(".selc_next_btn").addClass("pg_" + real_pg + "_answer");
+                        }
+                    }
+                }
+            }
+
+
 
             //암것도 없으면 모달 띄우기
             else {
