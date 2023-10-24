@@ -47,16 +47,20 @@ const inputAnswer = [
     {},
     {},
     {},
+    {
+        page: 5,
+        inputableAnswer: "45610040805"
+    },
+    {
+        page: 6,
+        inputableAnswer: "100000"
+    },
     {},
     {},
-    {},
-    {},
-    {},
+    {
+        page: 9,
+        inputableAnswer: "0205"
+    },
     {},
 ];
-
-$(document).on("click", ".end_pt", function () {
-    location.href = "../bank/bank.html";
-});
-
 

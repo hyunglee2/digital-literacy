@@ -570,7 +570,7 @@
   align-items: center;
   justify-content: center;
   padding: 1em;
-  padding-bottom: 0;
+  padding-bottom: 0.5em;
 }
 
 .date_top_btn {
@@ -595,6 +595,7 @@
   align-items: center;
   justify-content: center;
   padding: 1em;
+  padding-top: 0.5em;
 }
 
 .date_selc .date {
@@ -1279,6 +1280,11 @@ display: flex;
 .installment_pay .selc_box svg {
   width: 1em;
   height: 1em;
+}
+
+.pg_15_selected {
+  background: #7f5eb7 !important;
+  color: white;
 }
 
 /* +++++++++++ p16 +++++++++++ */

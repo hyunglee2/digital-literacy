@@ -48,8 +48,3 @@ const inputAnswer = [
     {}
 ];
 
-$(document).on("click", ".end_pt", function () {
-    location.href = "../talk/talk.html";
-});
-
-

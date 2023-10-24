@@ -262,12 +262,17 @@
   border-radius: 0.8rem;
 }
 
+.pg_5_edit_css {
+  color: #000000 !important;
+}
+
 /* +++++++++++ p6 +++++++++++ */
 #p6 .inputnum {
   text-align: end;
 }
 
 .transfer .bottomKeypad {
+  /* height: calc(var(--vh, 1vh)*45); */
   position: absolute;
   left: 0;
   right: 0;
@@ -308,6 +313,10 @@
   border-radius: 1rem;
   color: white;
   background: #499a91;
+}
+
+.pg_6_edit_css {
+  color: #000000 !important;
 }
 
 /* +++++++++++ p7 +++++++++++ */
@@ -377,8 +386,8 @@
 
 /* +++++++++++ p9 +++++++++++ */
 .transfer .popup-bar {
-padding-left: 2em;
-padding-right: 2em;
+padding-left: 1.5em;
+padding-right: 1.5em;
 }
 
 

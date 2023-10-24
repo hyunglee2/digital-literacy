@@ -67,9 +67,3 @@ const inputAnswer = [
     {},
     {}
 ];
-
-$(document).on("click", ".end_pt", function () {
-    location.href = "../order/order.html";
-});
-
-

@@ -45,9 +45,3 @@ const inputAnswer = [
     {},
     {},
 ];
-
-$(document).on("click", ".end_pt", function () {
-    location.href = "../bank/bank.html";
-});
-
-

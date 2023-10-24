@@ -496,7 +496,6 @@
 .floating-button {
   display: flex;
   flex-direction: column;
-  min-width: 50%;
   justify-content: flex-end;
   align-items: flex-end;
   position: absolute;
@@ -531,6 +530,14 @@
   width: 100%;
   background: #dedede;
   height: calc(var(--vh, 1vh)*40);
+}
+
+#p6 .btn_wrap .ok_btn {
+  text-align: center;
+  background: #a0d6be;
+  color: white;
+  padding: 0.5em;
+  border-radius: 1rem;
 }
 
 
