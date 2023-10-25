@@ -193,8 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                 }
                 init();
-                if (currScn == 'train' && page_num == 10) { // train/p10
-                    page_num = 13;
+                if (e.target.className.includes("pg_3skip")) { // train/p10
+                    page_num += 3;
                 } else if (e.target.className.includes("pg_2skip")) { // talk/p3
                     page_num += 2;
                 }
