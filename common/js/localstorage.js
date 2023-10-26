@@ -5,8 +5,7 @@
 
 
 // JSON 형태
-const user_data = `{
-    "user_data": [
+const user_data = `[
       {
         "71succ": "",
         "71fail": "",
@@ -36,7 +35,7 @@ const user_data = `{
         "sum": ""
       }
     ]
-  }`;
+  `;
 
 
 // Routing 역할 위함
@@ -51,25 +50,25 @@ var currScn;
 var nextPage;
 
 if (currPage === "map") {
-    currScn = 71;
-    parsingNum = 0;
-    nextPage = "train";
+  currScn = 71;
+  parsingNum = 0;
+  nextPage = "train";
 } else if (currPage === "train") {
-    currScn = 72;
-    parsingNum = 1;
-    nextPage = "order";
+  currScn = 72;
+  parsingNum = 1;
+  nextPage = "order";
 } else if (currPage === "order") {
-    currScn = 73;
-    parsingNum = 2;
-    nextPage = "talk";
+  currScn = 73;
+  parsingNum = 2;
+  nextPage = "talk";
 } else if (currPage === "talk") {
-    currScn = 74;
-    parsingNum = 3;
-    nextPage = "bank";
+  currScn = 74;
+  parsingNum = 3;
+  nextPage = "bank";
 } else if (currPage === "bank") {
-    currScn = 75;
-    parsingNum = 4;
-} 
+  currScn = 75;
+  parsingNum = 4;
+}
 
 
 
@@ -78,14 +77,14 @@ const idSubmitBtn = document.getElementById("idSubmitBtn");
 const userId = document.getElementById("userId");
 
 idSubmitBtn.addEventListener("click", function () {
-    const inputName = userId.value;
-    if (inputName == "") {
-        $('#staticBackdrop').modal('show');
-        $('.modal-body').html('사용자 ID를 입력해야 버튼이 활성화됩니다.');
-        return false;
-    } else {
-        localStorage["user_now"] = inputName;
-        localStorage[inputName] = user_data;
-        location.href = "./survey/survey.html";
-    }
+  const inputName = userId.value;
+  if (inputName == "") {
+    $('#staticBackdrop').modal('show');
+    $('.modal-body').html('사용자 ID를 입력해야 버튼이 활성화됩니다.');
+    return false;
+  } else {
+    localStorage["user_now"] = inputName;
+    localStorage[inputName] = user_data;
+    location.href = "./survey/survey.html";
+  }
 })
