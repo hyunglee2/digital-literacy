@@ -6,35 +6,25 @@
 
 // JSON 형태
 const user_data = `[
-      {
-        "71succ": "",
-        "71fail": "",
-        "71ded": ""
-      },
-      {
-        "72succ": "",
-        "72fail": "",
-        "72ded": ""
-      },
-      {
-        "73succ": "",
-        "73fail": "",
-        "73ded": ""
-      },
-      {
-        "74succ": "",
-        "74fail": "",
-        "74ded": ""
-      },
-      {
-        "75succ": "",
-        "75fail": "",
-        "75ded": ""
-      },
-      {
-        "sum": ""
-      }
-    ]
+  {
+    "71succ": "",
+    "71fail": "",
+    "71ded": "",
+    "72succ": "",
+    "72fail": "",
+    "72ded": "",
+    "73succ": "",
+    "73fail": "",
+    "73ded": "",
+    "74succ": "",
+    "74fail": "",
+    "74ded": "",
+    "75succ": "",
+    "75fail": "",
+    "75ded": "",
+    "sum": ""
+  }
+]
   `;
 
 
@@ -88,3 +78,4 @@ idSubmitBtn.addEventListener("click", function () {
     location.href = "./survey/survey.html";
   }
 })
+

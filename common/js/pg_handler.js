@@ -85,10 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //스킵 버튼 : 클릭 시 다음 시나리오로 이동, 해당 씬 성공여부 = 0
     $(document).on("click", ".skip_btn", function () {
         var succ = currScn + 'succ';
-        parse_data[parsingNum][succ] = false;
+        parse_data[0][succ] = false;
         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
         location.href = "../" + nextPage + "/" + nextPage + ".html";
     });
+
+    
 
     //*******************************************************************************
     //**************************+    클릭 제어   +*********************************** 
@@ -132,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 시나리오 마지막 부분
             if (e.target.className.includes("end_pt")) {
                 var succ = currScn + 'succ';
-                parse_data[parsingNum][succ] = true;
+                parse_data[0][succ] = true;
                 localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                 location.href = "../" + nextPage + "/" + nextPage + ".html";
             }
@@ -184,12 +186,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // ded_score
             else if (e.target.className.includes("ded_score")) {
                 var ded = currScn + 'ded';
-                var currDed = parse_data[parsingNum][ded];
+                var currDed = parse_data[0][ded];
                 if (currDed == "") {
-                    parse_data[parsingNum][ded] = 1;
+                    parse_data[0][ded] = 1;
                     localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                 } else {
-                    parse_data[parsingNum][ded] += 1;
+                    parse_data[0][ded] += 1;
                     localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                 }
                 init();
@@ -290,12 +292,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         doubleSubmitFlag = false;
                     } else {//일치하지 않으면 감점 후 넘어가기, 받는분 '국평원'
                         var ded = currScn + 'ded';
-                        var currDed = parse_data[parsingNum][ded];
+                        var currDed = parse_data[0][ded];
                         if (currDed == "") {
-                            parse_data[parsingNum][ded] = 1;
+                            parse_data[0][ded] = 1;
                             localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                         } else {
-                            parse_data[parsingNum][ded] += 1;
+                            parse_data[0][ded] += 1;
                             localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                         }
 
@@ -308,12 +310,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
 
                     var fail = currScn + 'fail';
-                    var currFail = parse_data[parsingNum][fail];
+                    var currFail = parse_data[0][fail];
                     if (currFail == "") {
-                        parse_data[parsingNum][fail] = 1;
+                        parse_data[0][fail] = 1;
                         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                     } else {
-                        parse_data[parsingNum][fail] += 1;
+                        parse_data[0][fail] += 1;
                         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                     }
                     $('#staticBackdrop').modal('show');
@@ -373,12 +375,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     doubleSubmitFlag = false;
                 } else {//일치하지 않으면 감점 후 넘어가기, 받는분 '국평원'
                     var ded = currScn + 'ded';
-                    var currDed = parse_data[parsingNum][ded];
+                    var currDed = parse_data[0][ded];
                     if (currDed == "") {
-                        parse_data[parsingNum][ded] = 1;
+                        parse_data[0][ded] = 1;
                         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                     } else {
-                        parse_data[parsingNum][ded] += 1;
+                        parse_data[0][ded] += 1;
                         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                     }
                     next();
@@ -428,23 +430,23 @@ document.addEventListener('DOMContentLoaded', () => {
                                 doubleSubmitFlag = false;
                             } else {
                                 var fail = currScn + 'fail';
-                                var currFail = parse_data[parsingNum][fail];
+                                var currFail = parse_data[0][fail];
                                 if (currFail == "") {
-                                    parse_data[parsingNum][fail] = 1;
+                                    parse_data[0][fail] = 1;
                                     localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                                 } else {
-                                    parse_data[parsingNum][fail] += 1;
+                                    parse_data[0][fail] += 1;
                                     localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                                 }
                                 pwTrial += 1;
                                 if (pwTrial >= 3) { //회 오류부터는 ded 증가하고 다음 페이지로 넘어가기
                                     var ded = currScn + 'ded';
-                                    var currDed = parse_data[parsingNum][ded];
+                                    var currDed = parse_data[0][ded];
                                     if (currDed == "") {
-                                        parse_data[parsingNum][ded] = 1;
+                                        parse_data[0][ded] = 1;
                                         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                                     } else {
-                                        parse_data[parsingNum][ded] += 1;
+                                        parse_data[0][ded] += 1;
                                         localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
                                     }
                                     next();
@@ -476,6 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(pw_set);
                 }
             }
+            
 
             //암것도 없으면 모달 띄우기
             else {
@@ -489,12 +492,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // page에서 정답 이외의 영역 클릭시 모달 띄우고 fail 횟수 증가
             $('.modal-body').html(tryAginMsg);
             var fail = currScn + 'fail';
-            var currFail = parse_data[parsingNum][fail];
+            var currFail = parse_data[0][fail];
             if (currFail == "") {
-                parse_data[parsingNum][fail] = 1;
+                parse_data[0][fail] = 1;
                 localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
             } else {
-                parse_data[parsingNum][fail] += 1;
+                parse_data[0][fail] += 1;
                 localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
             }
         }
