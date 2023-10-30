@@ -18,7 +18,7 @@
       alert(parse_data);
       console.log(JSON.stringify(parse_data));
 
-      fetch('https://api.directual.com/good/api/v5/data/getdata_hWebHookData/getdata7?appID=2af228bd-44ba-4f16-8f3b-095248a39606&sessionID=', {
+      fetch('https://api.directual.com/good/api/v5/webHook/getdata_h?appID=2af228bd-44ba-4f16-8f3b-095248a39606', {
         method: 'POST',
         body: JSON.stringify(parse_data),
         headers: {
