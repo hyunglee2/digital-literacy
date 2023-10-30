@@ -1,4 +1,4 @@
-var total_page = 16;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
+var total_page = 17;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
 
 const instruction = [
     `
@@ -13,8 +13,8 @@ const instruction = [
             ○ 도착일시 : 2시 이전 도착 <br>
             ○ 기차종류 : KTX 일반실<br>
             ○ 승 객 수 : 성인 1명<br>
-            ○ 좌석선택 : 창측 정방향<br>
-            ○ 결제방법 : 간편결제 > 카카오페이<br>
+            ○ 좌석선택 : 창측 순방향<br>
+            ○ 결제방법 : 간편결제 > 카카오페이 (비밀번호 : 130628)<br>
         </div>
     </div>
 
@@ -65,5 +65,9 @@ const inputAnswer = [
     {},
     {},
     {},
-    {}
+    {},
+    {
+        page: 17,
+        inputableAnswer: "130628"
+    }
 ];

@@ -63,6 +63,11 @@
   box-shadow: 0px 0px 40px 3px rgba(207, 207, 207, 0.5);
 }
 
+.w-30 {
+  width: 30%;
+  text-align: center;
+}
+
 /* +++++++++++ instruction modal +++++++++++ */
 .modal .modal_info {
   padding-top: 1em;

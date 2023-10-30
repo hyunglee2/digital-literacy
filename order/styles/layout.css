@@ -7,13 +7,7 @@
 #p7,
 #p8,
 #p9,
-#p10,
-#p11,
-#p12,
-#p13,
-#p14,
-#p15,
-#p16 {
+#p10 {
   width: 100%;
 }
 
@@ -605,6 +599,32 @@
   border-bottom: 4px solid #ffbc0d;
 
 }
+
+/* +++++++++++ p10 +++++++++++ */
+
+#p10 .bottom_btns_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: calc(var(--vh, 1vh)*72);
+  padding-top: 1em;
+  justify-content: space-between;
+}
+
+#p10 .btm_sm2 .bottom_btns{
+  align-items: flex-start !important;
+}
+#p10 .btm_sm2 .bottom_btns div {
+  padding: 0.3em;
+  border: 1px solid #6b6b6b;
+  text-align: center;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 3em;
+}
+
+
 /* ++++++++++++ 모바일 사이즈 미디어쿼리 ++++++++++++++++ */
 
 @media (max-width: 767px) {

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var accntArr = [];
     var priceArr = [];
     var pwArr = [];
+    var pw6Arr = [];
     var pwTrial = 0;
 
     //+++++++++++현재 사용자 데이터로 셋팅하기+++++++++++++++++
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         location.href = "../" + nextPage + "/" + nextPage + ".html";
     });
 
-    
+
 
     //*******************************************************************************
     //**************************+    클릭 제어   +*********************************** 
@@ -455,12 +456,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                     //입력한 비밀번호 초기화 , css 초기화
                                     pwArr = [];
-                            for (i = 0; i < 4; i++) {
-                                $(".dot" + i).css("background-color", "#4f4f5a");//버튼누르면 색칠초기화
-                            }
-                            //모달 띄우기
+                                    for (i = 0; i < 4; i++) {
+                                        $(".dot" + i).css("background-color", "#4f4f5a");//버튼누르면 색칠초기화
+                                    }
+                                    //모달 띄우기
                                     $('#staticBackdrop').modal('show');
-                                $('.modal-body').html('비밀번호를 확인하세요');
+                                    $('.modal-body').html('비밀번호를 확인하세요');
 
                                 }
                             }
@@ -478,7 +479,87 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(pw_set);
                 }
             }
-            
+
+            //----비번6자리 있을 경우 + dot -------------------
+            //pw_6_input pg_n_answer input_(키패드 넘버)
+            else if (e.target.className.includes("pw_6_input")) {
+
+                //키패드 번호 누르기
+                for (j = 0; j < 10; j++) {
+                    if (e.target.className.includes("input_" + j)) {
+                        //let pressedKey = j;
+                        if (pw6Arr.length < 5) {
+                            var num_cnt = pw6Arr.length
+                            pw6Arr.push(j);
+                            var pw_sett = pw6Arr.join('');
+                            console.log(pw_sett);
+                            $(".dot" + num_cnt).css("background-color", "black");//색칠
+
+                        } else if (pw6Arr.length = 5) { //배열 길이 5 -> 6개까지 입력하고 일어날 이벤트
+                            pw6Arr.push(j);
+                            $(".dot5").css("background-color", "black");//색칠
+                            var pw_set = pw6Arr.join('');
+
+                            if (pw_set === inputableAnswer) {
+                                var succ = currScn + 'succ';
+                                parse_data[0][succ] = true;
+                                localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                                location.href = "../" + nextPage + "/" + nextPage + ".html";
+                                doubleSubmitFlag = false;
+                            } else {
+                                var fail = currScn + 'fail';
+                                var currFail = parse_data[0][fail];
+                                if (currFail == "") {
+                                    parse_data[0][fail] = 1;
+                                    localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                                } else {
+                                    parse_data[0][fail] += 1;
+                                    localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                                }
+                                pwTrial += 1;
+                                if (pwTrial >= 3) { //회 오류부터는 ded 증가하고 다음 페이지로 넘어가기
+                                    var ded = currScn + 'ded';
+                                    var currDed = parse_data[0][ded];
+                                    if (currDed == "") {
+                                        parse_data[0][ded] = 1;
+                                        localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                                    } else {
+                                        parse_data[0][ded] += 1;
+                                        localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                                    }
+                                    var succ = currScn + 'succ';
+                                    parse_data[0][succ] = false;
+                                    localStorage.setItem(user, JSON.stringify(parse_data));  //문자열로 바꿔서 로컬저장
+                                    location.href = "../" + nextPage + "/" + nextPage + ".html";
+                                    doubleSubmitFlag = false;
+                                } else {
+
+                                    //입력한 비밀번호 초기화 , css 초기화
+                                    pw6Arr = [];
+                                    for (i = 0; i < 6; i++) {
+                                        $(".dot" + i).css("background-color", "#ffc700");//버튼누르면 색칠초기화
+                                    }
+                                    //모달 띄우기
+                                    $('#staticBackdrop').modal('show');
+                                    $('.modal-body').html('비밀번호를 확인하세요');
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+                //삭제 누르기 + 색칠 지우기
+                if (e.target.className.includes("pop_input")) {
+                    pw6Arr.splice(-1, 1); // 배열 맨 뒷 요소 지우기
+                    var pw_set = pw6Arr.join('');
+                    var pw_length = pw_set.length;
+                    // dltNum = pw_length + 1;
+                    $(".dot" + pw_length).css("background-color", "#ffc700");
+                    console.log(pw_set);
+                }
+            }
+
 
             //암것도 없으면 모달 띄우기
             else {

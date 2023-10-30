@@ -1,4 +1,4 @@
-#p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9, #p10,#p11, #p12, #p13, #p14, #p15, #p16 {
+#p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9, #p10,#p11, #p12, #p13, #p14, #p15, #p16, #p17 {
   width: 100%;
 }
 
@@ -24,6 +24,14 @@
 
 .white {
   color: white;
+}
+
+.white_bg {
+  background: white;
+}
+
+.yellow_bg {
+background: #ffc700;
 }
 
 .lightgray {
@@ -1367,9 +1375,12 @@ display: flex;
 }
 
 .card_img {
-  background: orange;
+  background: #d1e7f2;
   padding-top: 63%;
   border-radius: 2rem;
+  background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .card_wrap .installment_pay {
@@ -1424,6 +1435,64 @@ display: flex;
   height: 2em !important;
 }
 
+
+/* +++++++++++ p17 +++++++++++ */
+.transfer .popup-bar {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  }
+  
+  
+  .pw-input .dot {
+    display: block;
+    width: 2em;
+    height: 2em;
+    border: 1px solid black;
+    border-radius: 2rem;
+  }
+  
+  .pw-input .under_bar_keypad {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .pw-input .dots_wrap {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .pw-input .num {
+    width: 3em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pw-input .pwhelp {
+    text-align: center;
+    border-bottom: 1px solid black;
+    width: max-content;
+  }
+
+  .pw-input .under_bar_keypad {
+    height: calc(var(--vh, 1vh)*16);
+  }
+
+  .pw-input .pw_input_wrap {
+    height: calc(var(--vh, 1vh)*52);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pw-input .under_bar_keypad {
+    height: calc(var(--vh, 1vh)*35);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
 
 
 /* +++++++++++ bottom_tab_double +++++++++++ */

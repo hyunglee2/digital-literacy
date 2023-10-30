@@ -30,7 +30,14 @@ max-width : 768px !important;;
 }
 
 .icons_wrap img{
-  border-radius: 3rem;
+  border-radius: 2rem;
+}
+
+@media (max-width: 767px) {
+  .icons_wrap img{
+    border-radius: 1rem;
+  }
+
 }
 
 .icons_wrap .app_name{

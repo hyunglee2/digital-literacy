@@ -1,4 +1,4 @@
-var total_page = 9;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
+var total_page = 10;//페이지 수 -> 시나리오마다 total_page 수 바꾸기 
 
 const instruction = [
     `
@@ -29,12 +29,6 @@ $(document).ready(function () {
 //     inputableAnswer: "12345678"
 // }
 const inputAnswer = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {},
     {},
     {},
